@@ -1,0 +1,32 @@
+project: 
+  type: website
+  render: 
+    - "*.qmd"
+  output-dir: docs
+
+from: markdown+emoji
+
+website: 
+  title: "Introducción a la Estadística para Ciencias Biológicas con R"
+  image: icon.png
+  favicon: icon.png
+  open-graph: true
+  repo-url: https://github.com/mmorenozam/biohack-website
+  navbar:
+    logo: icon.png
+    title: false
+    left: 
+      - href: index.qmd
+        text: Inicio
+      - text: Módulos
+        menu:
+          - text: "Módulo 1"
+            href: slides/modulo1/index.qmd
+            target: "_blank"
+format:
+  html:
+    theme:
+      light: [cosmo, theme.scss]
+    toc: true
+    code-copy: true
+    code-overflow: wrap
