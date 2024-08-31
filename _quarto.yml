@@ -8,25 +8,29 @@ from: markdown+emoji
 
 website: 
   title: "Introducción a la Estadística para Ciencias Biológicas con R"
-  image: icon.png
-  favicon: icon.png
+  image: icon1.png
+  favicon: icon1.png
   open-graph: true
   repo-url: https://github.com/mmorenozam/biohack-website
   navbar:
-    logo: icon.png
+    logo: icon1.png
     title: false
     left: 
       - href: index.qmd
         text: Inicio
+      - href: recursos.qmd
       - text: Módulos
         menu:
           - text: "Módulo 1"
-            href: slides/modulo1/index.qmd
+            href: https://mmorenozam.github.io/progR_modulo1/#/title-slide
             target: "_blank"
+      - href: ejercicios.qmd
 format:
   html:
     theme:
       light: [cosmo, theme.scss]
     toc: true
+    toc-location: left
+    toc-title: Contenido
     code-copy: true
     code-overflow: wrap

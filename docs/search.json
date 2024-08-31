@@ -2,50 +2,120 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Untitled",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
     "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+    "text": "El presente curso de estadística tiene cómo propósito el dar un enfoque práctico de metodologías estadísticas comúnmente empleadas en el campo de la biología y la agricultura sin hacer mayor énfasis en teoría y resolución de problemas a mano como usualmente ocurre en el desenvolvimiento de contenidos de cursos tradicionales en estadística. En su lugar, el currículum aquí propuesto busca el dar una visión práctica a sus participantes de cómo los datos pueden ser analizados en base a un orden cronológico dentro de una investigación empezando por la definición de la pregunta objeto de esta, pasando por la decisión del diseño experimental más adecuado y finalizando con su correcto análisis e interpretación de los resultados. En mayor detalle, se abarcan además problemas comunes en el análisis de datos como lo son los análisis exploratorios de carácter formal tales como estadísticos descriptivos, patrones de pérdida de observaciones y visualizaciones; y aquellos de carácter operacional como la preparación y limpieza de datos, buenas prácticas de documentación y programación. Es por ello por lo que se alienta a los participantes a usar sus propios datos a la par de los ejemplos que se pondrán a disposición con el fin de aprovechar el carácter práctico del curso que incluye un comprensivo recorrido en el uso de R, el cual es al momento el lenguaje de programación estadística de mayor predilección en diversas ramas de las ciencias biológicas tanto en la academia como en la industria."
   },
   {
-    "objectID": "index.html#quarto",
-    "href": "index.html#quarto",
-    "title": "Untitled",
+    "objectID": "index.html#descripción-del-curso",
+    "href": "index.html#descripción-del-curso",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
     "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+    "text": "El presente curso de estadística tiene cómo propósito el dar un enfoque práctico de metodologías estadísticas comúnmente empleadas en el campo de la biología y la agricultura sin hacer mayor énfasis en teoría y resolución de problemas a mano como usualmente ocurre en el desenvolvimiento de contenidos de cursos tradicionales en estadística. En su lugar, el currículum aquí propuesto busca el dar una visión práctica a sus participantes de cómo los datos pueden ser analizados en base a un orden cronológico dentro de una investigación empezando por la definición de la pregunta objeto de esta, pasando por la decisión del diseño experimental más adecuado y finalizando con su correcto análisis e interpretación de los resultados. En mayor detalle, se abarcan además problemas comunes en el análisis de datos como lo son los análisis exploratorios de carácter formal tales como estadísticos descriptivos, patrones de pérdida de observaciones y visualizaciones; y aquellos de carácter operacional como la preparación y limpieza de datos, buenas prácticas de documentación y programación. Es por ello por lo que se alienta a los participantes a usar sus propios datos a la par de los ejemplos que se pondrán a disposición con el fin de aprovechar el carácter práctico del curso que incluye un comprensivo recorrido en el uso de R, el cual es al momento el lenguaje de programación estadística de mayor predilección en diversas ramas de las ciencias biológicas tanto en la academia como en la industria."
   },
   {
-    "objectID": "index.html#running-code",
-    "href": "index.html#running-code",
-    "title": "Untitled",
-    "section": "Running Code",
-    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed)."
+    "objectID": "index.html#requisitos",
+    "href": "index.html#requisitos",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
+    "section": "Requisitos:",
+    "text": "Requisitos:\n\nComputador con al menos 2 GB de RAM y procesador de 64 bits"
   },
   {
-    "objectID": "slides/modulo1/index.html",
-    "href": "slides/modulo1/index.html",
-    "title": "Tetas de emilia",
+    "objectID": "index.html#duración",
+    "href": "index.html#duración",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
+    "section": "Duración:",
+    "text": "Duración:\n20 horas de clase repartidas en 8 sesiones de 2 horas y media cada una, y\n20 horas autónomo-prácticas, dando un total de\n40 horas"
+  },
+  {
+    "objectID": "index.html#modalidad",
+    "href": "index.html#modalidad",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
+    "section": "Modalidad:",
+    "text": "Modalidad:\n100% Online"
+  },
+  {
+    "objectID": "index.html#horario",
+    "href": "index.html#horario",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
+    "section": "Horario:",
+    "text": "Horario:\nSábados: 14, 21, 28 de Septiembre, 5, 19 y 26 de Octubre de 9H00 a 12H00\nUnica clase entre semana: Jueves 17 de Octubre de 18H30 a 20H30\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNota\n\n\n\nNo hay clase el Sábado 12 de Octubre debido al feriado. La clase se recupera el 17 de 18H30 a 20H30."
+  },
+  {
+    "objectID": "index.html#contenidos-del-curso",
+    "href": "index.html#contenidos-del-curso",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
+    "section": "Contenidos del curso",
+    "text": "Contenidos del curso\n\n\n\n\n\n\n\nMódulo\nContenido\n\n\n\n\nMódulo 1: Generalidades e Introducción a R\nDuración: 2 horas\n\nGeneralidades\nIntroducción a R\nTipos de datos en R\nOperadores en R\nTipos de objetos en R\nPaquetes y librerías\nOperaciones básicas\nOperaciones estadísticas básicas\nEstadísticos descriptivos\n\n\n\nMódulo 2: Proyectos en R y buenas prácticas de programación\nDuración: 0.5 horas\n\nProyectos en R\nReglas básicas para programar y nombrar objetos en R\nBuenas prácticas de programación\n\n\n\nMódulo 3: Introducción al tidyverse\nDuración: 2.5 horas\n\nTipos de tablas\nTidy data\nEl tidyverse\nImportación y exportación de datos\nOperaciones con tablas de datos\n\n\n\nMódulo 4: Visualización de datos con ggplot2\nDuración: 2.5 horas\n\nFunciones de ggplot2\nGeometrías\nEstéticas de geometrías\nFormato de figuras\nAnálisis Exploratorio\n\n\n\nMódulo 5: Introducción a la Estadística Inferencial con R\nDuración: 5 horas\n\nMuestras, poblaciones y muestreos\nParámetros poblaciones y de muestro\nEstimación de parámetros de población.\nIntervalos de confianza\nPruebas de hipótesis\nTipos de errores\nPoder de una prueba estadística\nTamaño del efecto\nColas de una prueba\nPruebas estadísticas paramétricas simples\nPruebas estadísticas no paramétricas\nIntroducción al Análisis de Varianza (ANOVA)\n\n\n\nMódulo 6: Principios básicos de Diseño de Experimentos\nDuración: 2.5 horas\n\nTipos de estudios\nPilares del diseño de experimentos\nRepeticiones\nTamaño de muestra\nDiseño Completamente al Azar (DCA)\nDiseño en Bloques Completamente al Azar (DBCA)\nDiseño Factorial Completo (DFC)\nDiseño Cuadrado Latino (DCL)\nOtros diseños experimentales\n\n\n\nMódulo 7: Otros métodos estadísticos comúnmente usados en Biología\nDuración: 3 horas\n\nRegresión lineal simple y múltiple\nIntroducción a modelos lineales generalizados\nAnálisis de componentes principales\n\n\n\nMódulo 8: Introducción a la creación de reportes con Quarto\nDuración: 2 horas\n\nIntroducción a Quarto y Rmarkdown\nEstructura de un documento de Quarto\nGeneración de nuestro primer reporte\nTipos de documentos en Quarto"
+  },
+  {
+    "objectID": "index.html#objetivos-de-aprendizaje",
+    "href": "index.html#objetivos-de-aprendizaje",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
+    "section": "Objetivos de aprendizaje:",
+    "text": "Objetivos de aprendizaje:\nAl término del curso, el estudiante deberá ser capaz de:\n\nRealizar operaciones básicas en R, tales como: cargar, modificar, limpiar y guardar tablas de datos.\nRealizar gráficos de manera profesional usando R.\nPlanificar y decidir que tipo de diseño experimental deberá usar para llevar a cabo un estudio, dependiendo de la hipótesis del mismo.\nLlevar a cabo análisis exploratorio de datos.\nLlevar a cabo, interpretar y reportar los resultados de metodologías estadísticas tales como: pruebas t, pruebas no paramétricas y análisis de varianza.\nRealizar reportes estadísticos básicos en R."
+  },
+  {
+    "objectID": "index.html#evaluación-del-curso",
+    "href": "index.html#evaluación-del-curso",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
+    "section": "Evaluación del curso",
+    "text": "Evaluación del curso\nPara aprobar el curso, el estudiante tendrá la posibilidad de optar entre las siguientes opciones:\nOpción 1:\nDos semanas antes del término de curso estará disponible en el servidor de Moodle una evaluación final de todo lo cubierto en los distintos módulos del mismo, abierta para su resolución hasta el 16 de Noviembre de 2024.\nOpción 2:\nPresentación de un reporte estadístico con datos del estudiante o citando la fuente de los mismos. La estructura de este tipo de reporte deberá seguir las instrucciones detalladas en el módulo del curso pertinente a la preparación y elaboración de reportes en R. La fecha límite de entrega de esta opción es hasta el 16 de Noviembre de 2024 a la dirección de correo del instructor."
+  },
+  {
+    "objectID": "index.html#canales-de-comunicación",
+    "href": "index.html#canales-de-comunicación",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
+    "section": "Canales de comunicación:",
+    "text": "Canales de comunicación:\n\nPreguntas durante las sesiones\nConsultas dirigidas al instructor al correo electrónico: mmorenozambrano@gmail.com"
+  },
+  {
+    "objectID": "index.html#sobre-el-instructor",
+    "href": "index.html#sobre-el-instructor",
+    "title": "Introducción a la Estadística para Ciencias Biológicas con R",
+    "section": "Sobre el instructor",
+    "text": "Sobre el instructor\nMauricio Moreno, PhD\nIngeniero en Biotecnología (Universidad de las Fuerzas Armadas - ESPE), cuenta con un máster en Estadística con mención en Biometría (KU Leuven, Bélgica) y un doctorado en Bioinformática (Jacobs University Bremen, Alemania), posee más de diez años de experiencia en programación estadística en R. Ha trabajado como consultor independiente, profesor, analista de estadísticas ambientales e investigador postdoctoral. Actualmente, ocupa el puesto de Científico Bioestadístico en la función de Soluciones de Campo en Bayer Crop Science, liderando proyectos de investigación y desarrollo incluyendo la migración de procesos estadísticos a la nube y determinación de tamaños de muestra mediante simulaciones Montecarlo basados en cadenas de Markov."
+  },
+  {
+    "objectID": "recursos.html",
+    "href": "recursos.html",
+    "title": "Recursos",
     "section": "",
-    "text": "LA PUTA MADRE"
+    "text": "Nombre\nDescripción\n\n\n\n\nrotXLS.xlsx\nDatos históricos de casos de rotavirus y variables ambientales de la ciudad de Berlin\n\n\ntitatic.csv\nDatos de sobrevivientes del Titanic en varios niveles de agregación (ejemplo, por género)\n\n\ntouchon.csv\nDatos de depredadores de la rana arbórea de ojos rojos (investigación del Prof. Justin C. Touchon)\n\n\n\nSe encuentran disponibles AQUI"
   },
   {
-    "objectID": "slides/modulo1/index.html#quarto",
-    "href": "slides/modulo1/index.html#quarto",
-    "title": "test",
-    "section": "Quarto",
-    "text": "Quarto\nLA PUTA MADRE"
+    "objectID": "recursos.html#libros-gratis",
+    "href": "recursos.html#libros-gratis",
+    "title": "Recursos",
+    "section": "Libros (gratis)",
+    "text": "Libros (gratis)\nLearning Statistics with R de Danielle Navarro: excelente libro para comenzar el viaje de aprendizaje de R. Explica conceptos estadísticos de una manera sencilla y evitando complicadas fórmulas tanto como puede.\nModern Statistics with R de Måns Thulin: es un ebook que abarca a mayor profundidad aspectos de operaciones con bases de datos y modelos estadísticos más complejos que los que cubrimos en el curso.\nR for Data Science de Hadley Wickham, Mine Çetinkaya-Rundel y Garrett Grolemund: es un excelente recurso para llevar a cabo modelamiento de datos desde los principios más básicos hasta la implementación de flujos de trabajo para producción. Está bastante focalizado en el uso del tidyverse.\nRStudio para Estadística Descriptiva en Ciencias Sociales de Giorgio Boccardo Bosoni y Felipe Ruiz Bruzzone: es un ebook que contiene buena información en español sobre R. Al menos para la transformación de objetos y conducción de estadísticos descriptivos."
   },
   {
-    "objectID": "slides/modulo1/index.html#bullets",
-    "href": "slides/modulo1/index.html#bullets",
-    "title": "test",
-    "section": "Bullets",
-    "text": "Bullets\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown\nOutput from executable code"
+    "objectID": "recursos.html#sitios-web",
+    "href": "recursos.html#sitios-web",
+    "title": "Recursos",
+    "section": "Sitios web",
+    "text": "Sitios web\nStackOverflow\ntowards data science\nSTHDA"
   },
   {
-    "objectID": "slides/modulo1/index.html#code",
-    "href": "slides/modulo1/index.html#code",
-    "title": "test",
-    "section": "Code",
-    "text": "Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n\n[1] 2"
+    "objectID": "ejercicios.html",
+    "href": "ejercicios.html",
+    "title": "Ejercicios",
+    "section": "",
+    "text": "Demostración\npoqruekj a;sdlka;lksdjf qipowefsdnx"
+  },
+  {
+    "objectID": "recursos.html#tablas-de-datos-extras-usadas-en-las-diapositivas",
+    "href": "recursos.html#tablas-de-datos-extras-usadas-en-las-diapositivas",
+    "title": "Recursos",
+    "section": "",
+    "text": "Nombre\nDescripción\n\n\n\n\nrotXLS.xlsx\nDatos históricos de casos de rotavirus y variables ambientales de la ciudad de Berlin\n\n\ntitatic.csv\nDatos de sobrevivientes del Titanic en varios niveles de agregación (ejemplo, por género)\n\n\ntouchon.csv\nDatos de depredadores de la rana arbórea de ojos rojos (investigación del Prof. Justin C. Touchon)\n\n\n\nSe encuentran disponibles AQUI"
+  },
+  {
+    "objectID": "recursos.html#recursos-extras",
+    "href": "recursos.html#recursos-extras",
+    "title": "Recursos",
+    "section": "Recursos extras",
+    "text": "Recursos extras\n\nLibros (gratis)\nLearning Statistics with R de Danielle Navarro: excelente libro para comenzar el viaje de aprendizaje de R. Explica conceptos estadísticos de una manera sencilla y evitando complicadas fórmulas tanto como puede.\nModern Statistics with R de Måns Thulin: es un ebook que abarca a mayor profundidad aspectos de operaciones con bases de datos y modelos estadísticos más complejos que los que cubrimos en el curso.\nR for Data Science de Hadley Wickham, Mine Çetinkaya-Rundel y Garrett Grolemund: es un excelente recurso para llevar a cabo modelamiento de datos desde los principios más básicos hasta la implementación de flujos de trabajo para producción. Está bastante focalizado en el uso del tidyverse.\nRStudio para Estadística Descriptiva en Ciencias Sociales de Giorgio Boccardo Bosoni y Felipe Ruiz Bruzzone: es un ebook que contiene buena información en español sobre R. Al menos para la transformación de objetos y conducción de estadísticos descriptivos.\n\n\nSitios web\nStackOverflow\ntowards data science\nSTHDA"
   }
 ]
