@@ -82,5 +82,61 @@
     "title": "Introducción a la Estadística para Ciencias Biológicas con R",
     "section": "Sobre el instructor",
     "text": "Sobre el instructor\nMauricio Moreno, PhD\nIngeniero en Biotecnología (Universidad de las Fuerzas Armadas - ESPE), cuenta con un máster en Estadística con mención en Biometría (KU Leuven, Bélgica) y un doctorado en Bioinformática (Jacobs University Bremen, Alemania), posee más de diez años de experiencia en programación estadística en R. Ha trabajado como consultor independiente, profesor, analista de estadísticas ambientales e investigador postdoctoral. Actualmente, ocupa el puesto de Científico Bioestadístico en la función de Soluciones de Campo en Bayer Crop Science, liderando proyectos de investigación y desarrollo incluyendo la migración de procesos estadísticos a la nube y determinación de tamaños de muestra mediante simulaciones Montecarlo basados en cadenas de Markov."
+  },
+  {
+    "objectID": "ejercicios_m1.html",
+    "href": "ejercicios_m1.html",
+    "title": "Ejercicios Módulo 1",
+    "section": "",
+    "text": "1. Los creadores de R fueron Gentleman e Ihaka de la Universidad de Auckland\n\n\n\n\n\n\n\n\n2. 5 * 5 * 5 es equivalente a 5 ^ 3\n\n\n\n\n\n\n\n\n3. Una lista es un arreglo que admite datos de una sola clase únicamente\n\n\n\n\n\n\n\n\n4. Queremos comparar si x es igual a 5, es la siguiente expresión correcta? x = 5\n\n\n\n\n\n\n\n\n5. La función data.frame nos permite crear manualmente tablas de datos\n\n\n\n\n\n\n\n\n6. Al crear un objeto de esta forma: 1_cuenta = 12 R lo crea sin error alguno\n\n\n\n\n\n\n\n\n7. Si dejo un espacio en el nombre de un objeto, R me devuelve un error\n\n\n\n\n\n\n\n\n8. El comando install.libraries me permite instalar librerías\n\n\n\n\n\n\n\n\n9. En la expresión genérica mean(x, . . .) los puntos representan argumentos\n\n\n\n\n\n\n\n\n10. Es la siguiente expresión correcta: z -&gt; c(1, 2, 3)"
+  },
+  {
+    "objectID": "ejercicios_m1.html#ejercicios-1.1",
+    "href": "ejercicios_m1.html#ejercicios-1.1",
+    "title": "Ejercicios Módulo 1",
+    "section": "",
+    "text": "1. Los creadores de R fueron Gentleman e Ihaka de la Universidad de Auckland\n\n\n\n\n\n\n\n\n2. 5 * 5 * 5 es equivalente a 5 ^ 3\n\n\n\n\n\n\n\n\n3. Una lista es un arreglo que admite datos de una sola clase únicamente\n\n\n\n\n\n\n\n\n4. Queremos comparar si x es igual a 5, es la siguiente expresión correcta? x = 5\n\n\n\n\n\n\n\n\n5. La función data.frame nos permite crear manualmente tablas de datos\n\n\n\n\n\n\n\n\n6. Al crear un objeto de esta forma: 1_cuenta = 12 R lo crea sin error alguno\n\n\n\n\n\n\n\n\n7. Si dejo un espacio en el nombre de un objeto, R me devuelve un error\n\n\n\n\n\n\n\n\n8. El comando install.libraries me permite instalar librerías\n\n\n\n\n\n\n\n\n9. En la expresión genérica mean(x, . . .) los puntos representan argumentos\n\n\n\n\n\n\n\n\n10. Es la siguiente expresión correcta: z -&gt; c(1, 2, 3)"
+  },
+  {
+    "objectID": "ejercicios_m1.html#ejercicios-1.2",
+    "href": "ejercicios_m1.html#ejercicios-1.2",
+    "title": "Ejercicios Módulo 1",
+    "section": "Ejercicios 1.2",
+    "text": "Ejercicios 1.2\nDado el siguiente objeto:\n\n\n\n\n\n\n\n\n1. Es el elemento vector_ejemplo conformado por valores:\n\n\n\n\n\n\n\n\n2. Para acceder a la tercera fila de la primera columna del elemento tabla_de_datos, ¿Cuál(es) de las siguientes líneas de código es(son) la(s) correcta(s)?\na) ev_1$tabla_de_datos[[1]]\nb) ev_1$tabla_de_datos[1, 3]\nc) ev_1[[1]][3,1]\nd) ev_1$tabla_de_datos$columna_2[3]\ne) ev_1[[2]][3,1]\nf) ev_1$tabla_de_datos$columna_1[3]\n\n\n\n\n\n\n\n\n3. Deseo concatenar escalar_ejemplo con vector_ejemplo (en ese orden) en un elemento adicional del objeto ev_1 de nombre conc_ejemplo, ¿Cuál de las siguientes líneas de código es la correcta?\na) ev_1[[4]] &lt;- ev_1[[2]] + ev_1[[3]]\nb) ev_1$conc_ejemplo &lt;- c(ev_1[[3]],ev_1[[2]])\nc) ev_1$conc_ejemplo &lt;- c(ev_1$vector_escalar + ev_1$ejemplo_escalar)\n\n\n\n\n\n\n\n\n4. Deseo reemplazar el cuarto elemento de columna_2 en la tabla_de_datos por la letra “E”, ¿Cuál sería una solución?\n\nExerciseHintsSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUna forma de acceder al cuarto elemento de columna_2 en tabla_de_datos es:\nev_1$tabla_de_datos$columna_2[4]\n\n\n\n\nUna posible solución estará disponible pasada la clase\n\n\n\n\n5. Supongamos que para un determinado análisis con tabla_de_datos, la columna_2 corresponde a mi factor. En este factor mi nivel de referencia es “E”. ¿Cómo especifico en R que este sea el caso?\n\nExerciseHintsSolution\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUn ejemplo de código para establecer los niveles de un factor está disponible en las diapositivas\n\n\n\n\nUna posible solución estará disponible pasada la clase"
+  },
+  {
+    "objectID": "ejercicios_m1.html#ejercicios-1.3",
+    "href": "ejercicios_m1.html#ejercicios-1.3",
+    "title": "Ejercicios Módulo 1",
+    "section": "Ejercicios 1.3",
+    "text": "Ejercicios 1.3\n1. El coeficiente de variación es adimensional\n\n\n\n\n\n\n\n\n2. La media poblacional se aproxima a la media muestral con una corrección\n\n\n\n\n\n\n\n\n3. La desviación estándar muestral es un estimador de la poblacional después de una corrección\n\n\n\n\n\n\n\n\n4. La moda es igual al valor medio de una distribución\n\n\n\n\n\n\n\n\n5. El primer cuartil corresponde al 50% de probabilidad de una distribución\n\n\n\n\n\n\n\n\n6. Usando la variable disp de mtcars, calcula la media aritmética, la desviación estándar, la varianza, el tercer cuartil y el coeficiente de variación"
+  },
+  {
+    "objectID": "ejercicios_demo.html",
+    "href": "ejercicios_demo.html",
+    "title": "Demo de los ejercicios",
+    "section": "",
+    "text": "Esta sección está dedicada a que los estudiantes puedan resolver ejercicios de una manera más dinámica a lo largo del curso e iré actualizándola con el contenido correspondiente cada semana.\nContiene preguntas de opción múltiple, verdadero/falso, así como también pequeños ejercicios que podrán resolver de manera interactiva. Aquí un par de ejemplos:\n1. La hija de Don Ramón es\n\n\n\n\n\n\n\n\n2. La raíz cuadrada de 23105 es:"
+  },
+  {
+    "objectID": "recursos.html",
+    "href": "recursos.html",
+    "title": "Recursos",
+    "section": "",
+    "text": "Nombre\nDescripción\n\n\n\n\nrotXLS.xlsx\nDatos históricos de casos de rotavirus y variables ambientales de la ciudad de Berlin\n\n\ntitatic.csv\nDatos de sobrevivientes del Titanic en varios niveles de agregación (ejemplo, por género)\n\n\ntouchon.csv\nDatos de depredadores de la rana arbórea de ojos rojos (investigación del Prof. Justin C. Touchon)\n\n\n\nSe encuentran disponibles AQUI"
+  },
+  {
+    "objectID": "recursos.html#tablas-de-datos-extras-usadas-en-las-diapositivas",
+    "href": "recursos.html#tablas-de-datos-extras-usadas-en-las-diapositivas",
+    "title": "Recursos",
+    "section": "",
+    "text": "Nombre\nDescripción\n\n\n\n\nrotXLS.xlsx\nDatos históricos de casos de rotavirus y variables ambientales de la ciudad de Berlin\n\n\ntitatic.csv\nDatos de sobrevivientes del Titanic en varios niveles de agregación (ejemplo, por género)\n\n\ntouchon.csv\nDatos de depredadores de la rana arbórea de ojos rojos (investigación del Prof. Justin C. Touchon)\n\n\n\nSe encuentran disponibles AQUI"
+  },
+  {
+    "objectID": "recursos.html#recursos-extras",
+    "href": "recursos.html#recursos-extras",
+    "title": "Recursos",
+    "section": "Recursos extras",
+    "text": "Recursos extras\n\nLibros (gratis)\nLearning Statistics with R de Danielle Navarro: excelente libro para comenzar el viaje de aprendizaje de R. Explica conceptos estadísticos de una manera sencilla y evitando complicadas fórmulas tanto como puede.\nModern Statistics with R de Måns Thulin: es un ebook que abarca a mayor profundidad aspectos de operaciones con bases de datos y modelos estadísticos más complejos que los que cubrimos en el curso.\nR for Data Science de Hadley Wickham, Mine Çetinkaya-Rundel y Garrett Grolemund: es un excelente recurso para llevar a cabo modelamiento de datos desde los principios más básicos hasta la implementación de flujos de trabajo para producción. Está bastante focalizado en el uso del tidyverse.\nRStudio para Estadística Descriptiva en Ciencias Sociales de Giorgio Boccardo Bosoni y Felipe Ruiz Bruzzone: es un ebook que contiene buena información en español sobre R. Al menos para la transformación de objetos y conducción de estadísticos descriptivos.\n\n\nSitios web\nStackOverflow\ntowards data science\nSTHDA"
   }
 ]
