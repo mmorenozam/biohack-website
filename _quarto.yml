@@ -22,9 +22,14 @@ website:
       - text: Módulos
         menu:
           - text: "Módulo 1"
-            href: https://mmorenozam.github.io/progR_modulo1/#/title-slide
+            href: https://mmorenozam.github.io/biohack-modulo1/
             target: "_blank"
-      - href: ejercicios.qmd
+      - text: Ejercicios
+        menu:
+          - text: "Demo"
+            href: ejercicios_demo.qmd
+          - text: "Ejercicios Módulo 1"
+            href: ejercicios_m1.qmd
 format:
   html:
     theme:

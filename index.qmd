@@ -8,6 +8,15 @@ execute:
   error: false
 ---
 
+## Anuncios
+
+::: {.callout-important}
+-   **14.09.2024:** Bienvenidos al curso! antes de comenzar, una de las mejores oportunidades de aprender más acerca de R, es atender a sus conferencias. Afortunadament la conferencia de [LatinR2024](https://latinr.org/){target="_blank"} está próxima a darse a cabo.
+<!-- Note that there are five types of callouts, including: -->
+<!-- `note`, `warning`, `important`, `tip`, and `caution`. -->
+:::
+
+
 ## Descripción del curso:
 
 El presente curso de estadística tiene cómo propósito el dar un enfoque práctico de metodologías estadísticas comúnmente empleadas en el campo de la biología y la agricultura sin hacer mayor énfasis en teoría y resolución de problemas a mano como usualmente ocurre en el desenvolvimiento de contenidos de cursos tradicionales en estadística. En su lugar, el currículum aquí propuesto busca el dar una visión práctica a sus participantes de cómo los datos pueden ser analizados en base a un orden cronológico dentro de una investigación empezando por la definición de la pregunta objeto de esta, pasando por la decisión del diseño experimental más adecuado y finalizando con su correcto análisis e interpretación de los resultados. En mayor detalle, se abarcan además problemas comunes en el análisis de datos como lo son los análisis exploratorios de carácter formal tales como estadísticos descriptivos, patrones de pérdida de observaciones y visualizaciones; y aquellos de carácter operacional como la preparación y limpieza de datos, buenas prácticas de documentación y programación. Es por ello por lo que se alienta a los participantes a usar sus propios datos a la par de los ejemplos que se pondrán a disposición con el fin de aprovechar el carácter práctico del curso que incluye un comprensivo recorrido en el uso de R, el cual es al momento el lenguaje de programación estadística de mayor predilección en diversas ramas de las ciencias biológicas tanto en la academia como en la industria.
