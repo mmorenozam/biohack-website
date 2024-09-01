@@ -11,7 +11,7 @@ execute:
 ## Anuncios
 
 ::: {.callout-important}
--   **14.09.2024:** Bienvenidos al curso! antes de comenzar, una de las mejores oportunidades de aprender más acerca de R, es atender a sus conferencias. Afortunadament la conferencia de [LatinR2024](https://latinr.org/){target="_blank"} está próxima a darse a cabo.
+-   **14.09.2024:** Bienvenidos al curso! antes de comenzar, una de las mejores oportunidades de aprender más acerca de R, es atender a sus conferencias. Afortunadament la conferencia de [LatinR2024](https://latinr.org/){target="_blank"} está próxima a darse a cabo en Noviembre de este año.
 <!-- Note that there are five types of callouts, including: -->
 <!-- `note`, `warning`, `important`, `tip`, and `caution`. -->
 :::
