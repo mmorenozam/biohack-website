@@ -24,6 +24,9 @@ website:
           - text: "Módulo 1"
             href: https://mmorenozam.github.io/biohack-modulo1/
             target: "_blank"
+          - text: "Módulo 2"
+            href: https://mmorenozam.github.io/biohack-modulo2/
+            target: "_blank"
       - text: Ejercicios
         menu:
           - text: "Demo"

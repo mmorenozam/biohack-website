@@ -109,17 +109,17 @@ calendR(year = 2024, month = 10,
 |                                                                    |                                                          |
 |                                                                    | 3.  Buenas prácticas de programación                     |
 +--------------------------------------------------------------------+----------------------------------------------------------+
-| Módulo 3: Introducción al `tidyverse`                              | 1.  Tipos de tablas                                      |
+| Módulo 3: Introducción al `{tidyverse}`                            | 1.  Tipos de tablas                                      |
 |                                                                    |                                                          |
 | Duración: 2.5 horas                                                | 2.  Tidy data                                            |
 |                                                                    |                                                          |
-|                                                                    | 3.  El `tidyverse`                                       |
+|                                                                    | 3.  El `{tidyverse}`                                     |
 |                                                                    |                                                          |
 |                                                                    | 4.  Importación y exportación de datos                   |
 |                                                                    |                                                          |
 |                                                                    | 5.  Operaciones con tablas de datos                      |
 +--------------------------------------------------------------------+----------------------------------------------------------+
-| Módulo 4: Visualización de datos con `ggplot2`                     | 1.  Funciones de `ggplot2`                               |
+| Módulo 4: Visualización de datos con `{ggplot2}`                   | 1.  Funciones de `{ggplot2}`                             |
 |                                                                    |                                                          |
 | Duración: 2.5 horas                                                | 2.  Geometrías                                           |
 |                                                                    |                                                          |
