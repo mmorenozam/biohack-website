@@ -97,7 +97,6 @@ Dado el siguiente objeto:
 
 ```{webr}
 #| autorun: false
-
 ev_1 <- list(tabla_de_datos = data.frame(columna_1 = c(0.2, 2.5, 3.14, 4.15, 5.55),
                                          columna_2 = c("A", "B", "C", "D", "E"),
                                          columna_3 = c("1985-10-14", "2021-12-25", "2023-01-01", "1999-05-06", "1900-01-02")),
@@ -153,7 +152,7 @@ c) ev_1$conc_ejemplo <- c(ev_1$vector_escalar + ev_1$ejemplo_escalar)
 
 :::: {.panel-tabset}
 
-## Exercise
+## Ejercicio
 
 ```{webr}
 #| setup: true
@@ -179,7 +178,7 @@ ev_1$tabla_de_datos$columna_2[4]
 ```
 :::
 
-## Solution
+## Solución
 
 ::: { .solution exercise="ex_14" }
 Una posible solución estará disponible pasada la clase
@@ -191,7 +190,7 @@ Una posible solución estará disponible pasada la clase
 
 :::: {.panel-tabset}
 
-## Exercise
+## Ejercicio
 ```{webr}
 #| setup: true
 #| exercise: ex_15
@@ -213,7 +212,7 @@ ev_1 <- list(tabla_de_datos = data.frame(columna_1 = c(0.2, 2.5, 3.14, 4.15, 5.5
 Un ejemplo de código para establecer los niveles de un factor está disponible en las diapositivas
 :::
 
-## Solution
+## Solución
 
 ::: { .solution exercise="ex_15" }
 Una posible solución estará disponible pasada la clase
