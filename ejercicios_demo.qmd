@@ -41,7 +41,7 @@ Contiene preguntas de opción múltiple, verdadero/falso, así como también peq
 
 :::{.quiz-singlechoice}
 - [ ] [4862.3]{hint="x"}
-- [x] [11552.5]{hint="o"}
+- [x] [152.0033]{hint="o"}
 - [ ] [3.14]{hint="x"}
 - [ ] [Faltan datos]{hint="x"}
 :::

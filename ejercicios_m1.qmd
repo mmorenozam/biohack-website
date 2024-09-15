@@ -100,7 +100,7 @@ Dado el siguiente objeto:
 ev_1 <- list(tabla_de_datos = data.frame(columna_1 = c(0.2, 2.5, 3.14, 4.15, 5.55),
                                          columna_2 = c("A", "B", "C", "D", "E"),
                                          columna_3 = c("1985-10-14", "2021-12-25", "2023-01-01", "1999-05-06", "1900-01-02")),
-             vector_ejemplo = c("F", "T", "F", "T","F"),
+             vector_ejemplo = c(F, T, F, T, F),
              escalar_ejemplo = 100)
 ```
 
@@ -160,7 +160,7 @@ c) ev_1$conc_ejemplo <- c(ev_1$vector_escalar + ev_1$ejemplo_escalar)
 ev_1 <- list(tabla_de_datos = data.frame(columna_1 = c(0.2, 2.5, 3.14, 4.15, 5.55),
                                          columna_2 = c("A", "B", "C", "D", "E"),
                                          columna_3 = c("1985-10-14", "2021-12-25", "2023-01-01", "1999-05-06", "1900-01-02")),
-             vector_ejemplo = c("F", "T", "F", "T","F"),
+             vector_ejemplo = c(F, T, F, T, F),
              escalar_ejemplo = 100)
 ```
 
@@ -181,7 +181,7 @@ ev_1$tabla_de_datos$columna_2[4]
 ## Solución
 
 ::: { .solution exercise="ex_14" }
-Una posible solución estará disponible pasada la clase
+`ev_1$tabla_de_dates$columna_2[4] <- "E"`
 :::
 
 :::
@@ -197,7 +197,7 @@ Una posible solución estará disponible pasada la clase
 ev_1 <- list(tabla_de_datos = data.frame(columna_1 = c(0.2, 2.5, 3.14, 4.15, 5.55),
                                          columna_2 = c("A", "B", "C", "D", "E"),
                                          columna_3 = c("1985-10-14", "2021-12-25", "2023-01-01", "1999-05-06", "1900-01-02")),
-             vector_ejemplo = c("F", "T", "F", "T","F"),
+             vector_ejemplo = c(F, T, F, T, F),
              escalar_ejemplo = 100)
 ```
 
@@ -215,7 +215,7 @@ Un ejemplo de código para establecer los niveles de un factor está disponible 
 ## Solución
 
 ::: { .solution exercise="ex_15" }
-Una posible solución estará disponible pasada la clase
+`ev_1$tabla_de_dates$columna_2 <- relevel(as.factor(ev_1$tabla_de_dates$columna_2, ref = "E")` 
 :::
 
 :::
