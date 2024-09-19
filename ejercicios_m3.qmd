@@ -13,7 +13,7 @@ filters:
   - webr-teachr
   - quiz-teachr
 webr:
-  pagkages: ["ggplot2", "dplyr"]
+  pagkages: ["ggplot2", "dplyr", "tidyr"]
 engine: knitr
 ---
 
@@ -21,7 +21,7 @@ engine: knitr
 
 ::: {.callout-note}
 ## Nota
-En los siguientes ejercicios se usan `{ggplot2}` y `{dplyr}` que están precargados en la página. No es necesario que cargues las librerías.
+En los siguientes ejercicios se usan `{ggplot2}`, `{dplyr}` y `{tidyr}` que están precargados en la página. No es necesario que invoques las librerías.
 :::
 
 ## Ejercicios 3.1
@@ -83,6 +83,7 @@ msleep %>%
 #|   - ex_a7
 #|   - ex_a8
 #|   - ex_a9
+#|   - ex_a10
 library(ggplot2)
 library(dplyr)
 ```
@@ -162,4 +163,123 @@ Para cambiar el nombre y el orden de las columnas, puedes usar la función `sele
 Una posible solución estará disponible pasada la clase
 :::
 
+:::
+
+
+**10. Usando la tabla de datos `msleep` de la libreía `{ggplot2}`, crea una tabla con los estadísticos conteo, media aritmética, mediana, desviación estándar y coeficiente de variación agrupadas por la variable `vore` (un fragmento de código guía es provisto, reemplaza los espacios vacíos de la manera más conveniente).**
+
+
+
+:::: {.panel-tabset}
+
+## Ejercicio
+
+
+
+```{webr}
+#| exercise: ex_a10
+msleep |>
+  ________(vore) |>
+  summarise(_________)
+```
+
+## Hints
+
+::: { .hint exercise="ex_a10"}
+Usa la función `group_by` de `{dplyr}` para agrupar por una (o más) variable (s)
+:::
+
+## Solución
+
+::: { .solution exercise="ex_a9" }
+Una posible solución estará disponible pasada la clase
+:::
+
+:::
+
+## Ejercicios 3.2
+
+Las siguientes preguntas pueden tener más de una respuesta correcta.
+
+**1. ¿Por qué debemos cambiar el backslash (`\`) por slash (`/`) en R?**                          
+
+:::{.quiz-multichoice}
+- [ ] [No es necesario]{hint="x"}
+- [x] [El backslash puede provocar errores al ser usado para cargar caracteres especiales]{hint="o"}
+- [x] [Solo es necesario cambiarlo en sistemas operativos de Windows]{hint="o"}
+:::
+
+**2.  En la función `write.csv`, si el argumento `row.names` no es seteado como `F` lo que sucede es**
+
+:::{.quiz-singlechoice}
+- [x] [El archivo .csv creado contendrá una columna extra indicando el número de fila]{hint="o"}
+- [ ] [El separador de columnas será el punto y coma en lugar de la coma]{hint="x"}
+- [ ] [No pasa nada]{hint="x"}
+:::
+
+**3.  `mtcars`, es una tabla de R base cuya disposición es rectangular**
+
+:::{.quiz-singlechoice}
+- [x] [Verdadero]{hint="o"}
+- [ ] [Falso]{hint="x"}
+:::
+
+**Considera el siguiente código para responder las siguientes preguntas**
+
+```{webr}
+#| setup: true
+#| exercise:
+#|   - ex_b4
+library(dplyr)
+library(tidyr)
+```
+
+
+```{webr}
+#| exercise: ex_b4
+tabla_cars <- mtcars
+head(tabla_cars)
+tabla_cars$marca <- row.names(tabla_cars)
+tabla_cars %>% 
+  pivot_longer(-c("marca"), 
+               names_to = "variable", 
+               values_to = "valores")
+```
+
+**3.  En la línea 1 estamos creando una copia de `mtcars`**
+
+:::{.quiz-singlechoice}
+- [x] [Verdadero]{hint="o"}
+- [ ] [Falso]{hint="x"}
+:::
+
+**4.  En la línea 3 estamos**
+
+:::{.quiz-multichoice}
+- [ ] [Cambiando los nombres de las columnas]{hint="x"}
+- [x] [Extrayendo los nombres de las filas]{hint="o"}
+- [x] [Creando una nueva variable con los nombres de las marcas de autos]{hint="o"}
+:::
+
+**4.  En las líneas 4 a 7 estamos**
+
+:::{.quiz-singlechoice}
+- [ ] [Transformando de formato largo a ancho]{hint="x"}
+- [x] [Transformando de formato ancho a largo]{hint="o"}
+- [ ] [Preparando la tabla para exportar]{hint="x"}
+:::
+
+**5.  La expresión `-c("marca")` significa**
+
+:::{.quiz-singlechoice}
+- [ ] [Que estamos borrando la columna "marca" de `tabla_cars`]{hint="x"}
+- [x] [Que excluya "marca" del pivot]{hint="o"}
+- [ ] [Ninguna de las anteriores]{hint="x"}
+:::
+
+**6.  Podemos reemplazar `-c("marca")` por simplemente `- marca`**
+
+:::{.quiz-singlechoice}
+- [x] [Verdadero]{hint="o"}
+- [ ] [Falso]{hint="x"}
 :::

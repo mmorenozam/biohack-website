@@ -27,12 +27,17 @@ website:
           - text: "Módulo 2"
             href: https://mmorenozam.github.io/biohack-modulo2/
             target: "_blank"
+          - text: "Módulo 3"
+            href: https://mmorenozam.github.io/biohack-modulo3/
+            target: "_blank"
       - text: Ejercicios
         menu:
           - text: "Demo"
             href: ejercicios_demo.qmd
           - text: "Ejercicios Módulo 1"
             href: ejercicios_m1.qmd
+          - text: "Ejercicios Módulo 3"
+            href: ejercicios_m3.qmd
 format:
   html:
     theme:

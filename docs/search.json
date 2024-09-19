@@ -144,7 +144,7 @@
     "href": "ejercicios_m3.html",
     "title": "Ejercicios Módulo 3",
     "section": "",
-    "text": "Nota\n\n\n\nEn los siguientes ejercicios se usan {ggplot2} y {dplyr} que están precargados en la página. No es necesario que cargues las librerías."
+    "text": "Nota\n\n\n\nEn los siguientes ejercicios se usan {ggplot2}, {dplyr} y {tidyr} que están precargados en la página. No es necesario que invoques las librerías."
   },
   {
     "objectID": "ejercicios_m3.html#ejercicios-2.1",
@@ -158,7 +158,7 @@
     "href": "ejercicios_m3.html#ejercicios-3.1",
     "title": "Ejercicios Módulo 3",
     "section": "Ejercicios 3.1",
-    "text": "Ejercicios 3.1\n1. El operador de cascada de base de R es |&gt;\n\n\n\n\n\n\n\n\n2. Este es un buen nombre para un objeto en R: conteo semanal\n\n\n\n\n\n\n\n\n3. Cuando digo que una tabla está en formato largo, puedo decir que es rectangular\n\n\n\n\n\n\n\n\n4. Z es una función, Y es un objeto. Con la expresión Y(Z) estoy evaluando Y en función de Z\n\n\n\n\n\n\n\n\n5. La tabla msleep del paquete {ggplot2} tiene 83 filas y 11 columnas\n\n\n\n\n\n\n\n\n6. Estas expresiones dan el mismo resultado\nmsleep %&gt;% \n  filter(order == \"Primates\" | sleep_total &gt;= 10)\n\nmsleep %&gt;% \n  filter(order == \"Primates\", sleep_total &gt;= 10)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7. Estas expresión filtra la tabla iris excluyendo la categoría virginica de la columna Species\niris %&gt;% \n  filter(Species != \"virginica\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8. Deseo calcular la suma de Petal.Width por Species de la tabla iris. ¿Es correcta la siguiente expresión?\niris %&gt;% \n  filter(Species) %&gt;%\n  summarize(suma = sum())\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9. ¿Cómo harías para que la tabla iris se vea de la siguiente manera?\n       largo.sepal ancho.sepal largo.petalo ancho.petalo  especies\n1            5.1         3.5          1.4          0.2    setosa\n2            4.9         3.0          1.4          0.2    setosa\n3            4.7         3.2          1.3          0.2    setosa\n4            4.6         3.1          1.5          0.2    setosa\n5            5.0         3.6          1.4          0.2    setosa\n\nEjercicioHintsSolución\n\n\n\n\n\n\n\n\n\n\n\n\n\nPara cambiar el nombre y el orden de las columnas, puedes usar la función select de {dplyr}.\n\n\n\n\nUna posible solución estará disponible pasada la clase"
+    "text": "Ejercicios 3.1\n1. El operador de cascada de base de R es |&gt;\n\n\n\n\n\n\n\n\n2. Este es un buen nombre para un objeto en R: conteo semanal\n\n\n\n\n\n\n\n\n3. Cuando digo que una tabla está en formato largo, puedo decir que es rectangular\n\n\n\n\n\n\n\n\n4. Z es una función, Y es un objeto. Con la expresión Y(Z) estoy evaluando Y en función de Z\n\n\n\n\n\n\n\n\n5. La tabla msleep del paquete {ggplot2} tiene 83 filas y 11 columnas\n\n\n\n\n\n\n\n\n6. Estas expresiones dan el mismo resultado\nmsleep %&gt;% \n  filter(order == \"Primates\" | sleep_total &gt;= 10)\n\nmsleep %&gt;% \n  filter(order == \"Primates\", sleep_total &gt;= 10)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7. Estas expresión filtra la tabla iris excluyendo la categoría virginica de la columna Species\niris %&gt;% \n  filter(Species != \"virginica\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8. Deseo calcular la suma de Petal.Width por Species de la tabla iris. ¿Es correcta la siguiente expresión?\niris %&gt;% \n  filter(Species) %&gt;%\n  summarize(suma = sum())\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9. ¿Cómo harías para que la tabla iris se vea de la siguiente manera?\n       largo.sepal ancho.sepal largo.petalo ancho.petalo  especies\n1            5.1         3.5          1.4          0.2    setosa\n2            4.9         3.0          1.4          0.2    setosa\n3            4.7         3.2          1.3          0.2    setosa\n4            4.6         3.1          1.5          0.2    setosa\n5            5.0         3.6          1.4          0.2    setosa\n\nEjercicioHintsSolución\n\n\n\n\n\n\n\n\n\n\n\n\n\nPara cambiar el nombre y el orden de las columnas, puedes usar la función select de {dplyr}.\n\n\n\n\nUna posible solución estará disponible pasada la clase\n\n\n\n\n10. Usando la tabla de datos msleep de la libreía {ggplot2}, crea una tabla con los estadísticos conteo, media aritmética, mediana, desviación estándar y coeficiente de variación agrupadas por la variable vore (un fragmento de código guía es provisto, reemplaza los espacios vacíos de la manera más conveniente).\n\nEjercicioHintsSolución\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsa la función group_by de {dplyr} para agrupar por una (o más) variable (s)\n\n\n\n\nUna posible solución estará disponible pasada la clase"
   },
   {
     "objectID": "recursos.html#clases-grabadas",
@@ -166,5 +166,12 @@
     "title": "Recursos",
     "section": "",
     "text": "14.09.2024: Video disponible aquí"
+  },
+  {
+    "objectID": "ejercicios_m3.html#ejercicios-3.2",
+    "href": "ejercicios_m3.html#ejercicios-3.2",
+    "title": "Ejercicios Módulo 3",
+    "section": "Ejercicios 3.2",
+    "text": "Ejercicios 3.2\nLas siguientes preguntas pueden tener más de una respuesta correcta.\n1. ¿Por qué debemos cambiar el backslash (\\) por slash (/) en R?\n\n\n\n\n\n\n\n\n2. En la función write.csv, si el argumento row.names no es seteado como F lo que sucede es\n\n\n\n\n\n\n\n\n3. mtcars, es una tabla de R base cuya disposición es rectangular\n\n\n\n\n\n\n\n\nConsidera el siguiente código para responder las siguientes preguntas\n\n\n\n\n\n\n\n\n\n\n\n3. En la línea 1 estamos creando una copia de mtcars\n\n\n\n\n\n\n\n\n4. En la línea 3 estamos\n\n\n\n\n\n\n\n\n4. En las líneas 4 a 7 estamos\n\n\n\n\n\n\n\n\n5. La expresión -c(\"marca\") significa\n\n\n\n\n\n\n\n\n6. Podemos reemplazar -c(\"marca\") por simplemente - marca"
   }
 ]
