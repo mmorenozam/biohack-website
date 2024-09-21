@@ -160,13 +160,19 @@ Para cambiar el nombre y el orden de las columnas, puedes usar la función `sele
 ## Solución
 
 ::: { .solution exercise="ex_a9" }
-Una posible solución estará disponible pasada la clase
+```r
+iris %>%
+  select(largo.sepal = Sepal.Length, ancho.sepal = Sepal.Width,
+         largo.petalo = Petal.Length, ancho.petalo = Petal.Width,
+         especies = Species)
+```
 :::
 
 :::
 
 
-**10. Usando la tabla de datos `msleep` de la libreía `{ggplot2}`, crea una tabla con los estadísticos conteo, media aritmética, mediana, desviación estándar y coeficiente de variación agrupadas por la variable `vore` (un fragmento de código guía es provisto, reemplaza los espacios vacíos de la manera más conveniente).**
+
+**10. Usando la tabla de datos `msleep` de la libreía `{ggplot2}`, crea una tabla con los estadísticos conteo, media aritmética, mediana, desviación estándar y coeficiente de variación agrupadas por la variable `vore` de la variable `sleep_total` (un fragmento de código guía es provisto, reemplaza los espacios vacíos de la manera más conveniente).**
 
 
 
@@ -192,7 +198,15 @@ Usa la función `group_by` de `{dplyr}` para agrupar por una (o más) variable (
 ## Solución
 
 ::: { .solution exercise="ex_a9" }
-Una posible solución estará disponible pasada la clase
+```r
+msleep |>
+  filter(!is.na(vore)) %>% # para filtrar valores perdidos en la variable vore
+  group_by(vore) |>
+  summarise(conteo = n(), media_aritmetica = mean(sleep_total, na.rm = T),
+            mediana = median(sleep_total, na.rm = T),
+            desv_est = sd(sleep_total, na.rm = T),
+            coef_var = desv_est / media_aritmetica * 100)
+```
 :::
 
 :::
