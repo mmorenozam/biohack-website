@@ -145,8 +145,6 @@ iris %>%
 
 ## Ejercicio
 
-
-
 ```{webr}
 #| exercise: ex_a9
 ```

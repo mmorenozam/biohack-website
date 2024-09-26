@@ -173,5 +173,19 @@
     "title": "Ejercicios Módulo 3",
     "section": "Ejercicios 3.2",
     "text": "Ejercicios 3.2\nLas siguientes preguntas pueden tener más de una respuesta correcta.\n1. ¿Por qué debemos cambiar el backslash (\\) por slash (/) en R?\n\n\n\n\n\n\n\n\n2. En la función write.csv, si el argumento row.names no es seteado como F lo que sucede es\n\n\n\n\n\n\n\n\n3. mtcars, es una tabla de R base cuya disposición es rectangular\n\n\n\n\n\n\n\n\nConsidera el siguiente código para responder las siguientes preguntas\n\n\n\n\n\n\n\n\n\n\n\n3. En la línea 1 estamos creando una copia de mtcars\n\n\n\n\n\n\n\n\n4. En la línea 3 estamos\n\n\n\n\n\n\n\n\n4. En las líneas 4 a 7 estamos\n\n\n\n\n\n\n\n\n5. La expresión -c(\"marca\") significa\n\n\n\n\n\n\n\n\n6. Podemos reemplazar -c(\"marca\") por simplemente - marca"
+  },
+  {
+    "objectID": "ejercicios_m4.html",
+    "href": "ejercicios_m4.html",
+    "title": "Ejercicios Módulo 4",
+    "section": "",
+    "text": "Notas\n\n\n\n\nLa tabla de las ranas de Touchon así como las librerías {ggplot2}, {dplyr}, {viridis}, {patchwork} y {tidyr} están precargadas en la página."
+  },
+  {
+    "objectID": "ejercicios_m4.html#ejercicios-4.1",
+    "href": "ejercicios_m4.html#ejercicios-4.1",
+    "title": "Ejercicios Módulo 4",
+    "section": "Ejercicios 4.1",
+    "text": "Ejercicios 4.1\n\n\n\n\n\n\n\n1. Usando la tabla de datos ranas, trata de recrear el gráfico a continuación\n\n\n\n\n\n\n\n\n\n\nEjercicioHintsSolución\n\n\n\n\n\n\n\n\n\n\n\n\n\nLas variables longitud nariz-cloaca al emerger y edad de metamorfosis corresponden a Age.DPO y SVL.initial de la tabla de datos las ranas\n\n\n\n\n\n\n\n\n\n2. Llena los espacios vacíos del siguiente código para generar el gráfico a continuación\n\n\n\n\n\n\n\n\n\n\nEjercicioHintsSolución\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariables:\nPeso después de reabsorción de la cola: Mass.final Recursos: Res Edad de incubación: Hatch Tipo de predador: Pred\n\n\n\n\n\n\n\n\n\n3. Con la tabla de datos ranas, trata de recrear el gráfico a continuación\n\n\n\n\n\n\n\n\n\n\nEjercicioHintsSolución\n\n\n\n\n\n\n\n\n\n\n\n\n\nVariables:\nEdad de metamorfosis: Age.DPO Longitud de la cola al emerger: Tail.initial Recursos: Res Edad de incubación: Hatch Tipo de predador: Pred\n\n\n\n\n\n\n\n\n\n4. La tabla de datos world_bank_pop de {tidyr} contiene información acerca la población mundial entre los años 2000 al 2018. Con esta, trata de recrear el siguiente gráfico\n\n\n\n\n\n\n\n\n\n\nEjercicioHintsSolución\n\n\n\n\n\n\n\n\n\n\n\n\n\nHints están en forma de comentarios en el código\n\n\n\n\n\n\n\n\n\n5. Escoge 2 o más de los gráficos que hiciste anteriormente, y combínalos usando {patchwork} usando las fórmulas p1+p2 o (p1+p2)/p3"
   }
 ]
