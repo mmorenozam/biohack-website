@@ -310,7 +310,7 @@ resumen_ranas |>
   geom_line() + 
   geom_errorbar(aes(ymin = ____, ymax = ____), width = 0.1) +
   facet_grid(~____) +
-  labs(title = "Gráfico de interacción de la edad de\nincubación con el peso final por tipo de recursos"
+  labs(title = "Gráfico de interacción de la edad de\nincubación con el peso final por tipo de recursos",
        x = "Edad de incubación",
        y = "Peso después de\nreabsorción de la cola (g)",
        caption = "Barras de error representan el error estándar de las medias",
