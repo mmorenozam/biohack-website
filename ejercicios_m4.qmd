@@ -246,7 +246,17 @@ Las variables longitud nariz-cloaca al emerger y edad de metamorfosis correspond
 ## Solución
 
 ::: { .solution exercise="ex_a1" }
-
+```{r}
+ranas |>
+  ggplot(aes(x = Age.DPO,
+             y = SVL.initial,
+             color = Pred)) +
+  geom_point() +
+  geom_smooth(method = "lm", aes(fill = Pred)) +
+  labs(x = "Edad de metamorfosis (d)",
+       y = "Longitud nariz-cloaca al emerger (mm)") +
+  theme_bw()
+```
 :::
 
 :::
@@ -325,7 +335,31 @@ Tipo de predador: `Pred`
 ## Solución
 
 ::: { .solution exercise="ex_a2" }
+```{r}
+resumen_ranas <- ranas |>
+  group_by(Pred, Hatch, Res) |>
+  summarise(media = mean(Mass.final),
+            desv.est = sd(Mass.final),
+            se = desv.est/sqrt(n()))
 
+resumen_ranas |>
+  ggplot(aes(x = Hatch,
+             y = media,
+             color = Pred, 
+             group = Pred)) +
+  geom_point() +
+  geom_line() + 
+  geom_errorbar(aes(ymin = media - se, ymax = media + se), width = 0.1) +
+  facet_grid(~Res) +
+  labs(title = "Gráfico de interacción de la edad de\nincubación con el peso final por tipo de recursos",
+       x = "Edad de incubación",
+       y = "Peso después de\nreabsorción de la cola (g)",
+       caption = "Barras de error representan el error estándar de las medias",
+       color = "Tipo de predador") +
+  theme_bw() +
+  scale_color_viridis(discrete = T) +
+  theme(legend.position = "bottom")
+```
 :::
 
 :::
@@ -372,7 +406,19 @@ Tipo de predador: `Pred`
 ## Solución
 
 ::: { .solution exercise="ex_a3" }
-
+```{r}
+ranas |>
+  ggplot(aes(x = Age.DPO,
+             y = Tail.initial,
+             color = Pred)) +
+  geom_point(size = 3, alpha = 0.5) +
+  facet_grid(Hatch ~ Res) +
+  theme_linedraw() +
+  labs(title = "Gráficos de dispersión de edad de\nmetamorfosis vs. Longitud de la cola al emerger",
+       subtitle = "Paneles arreglados por recursos y edad de incubación",
+       x = "Edad de metamorfosis",
+       y = "Longitud de la cola (mm)")
+```
 :::
 
 :::
@@ -431,7 +477,29 @@ Hints están en forma de comentarios en el código
 ## Solución
 
 ::: { .solution exercise="ex_a4" }
+```{r}
+resumen_pob <- world_bank_pop %>%
+  filter(indicator %in% c("SP.POP.GROW", "SP.URB.GROW")) %>%
+  filter(country %in% c("ECU", "JPN")) %>%
+  pivot_longer(!c(country, indicator), names_to = "year", values_to = "pob") 
 
+resumen_pob %>%
+  ggplot(aes(x = year, 
+             y = pob, 
+             group = indicator, 
+             color = factor(indicator,
+                            levels = c("SP.POP.GROW",
+                                       "SP.URB.GROW"),
+                            labels = c("Total", "Urbana")))) +
+  geom_line() +
+  geom_point()+
+  facet_wrap(~country) +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, 
+                                   hjust = 1)) +
+  labs(title = "Tazas de crecimiento de Ecuador y Japón\nEntre 2000 y 2017",
+       x = "Año", y = "Taza de crecimiento", color = "Tipo de taza")
+```
 :::
 
 :::

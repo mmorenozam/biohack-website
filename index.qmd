@@ -11,6 +11,12 @@ execute:
 ## Anuncios
 
 ::: {.callout-important}
+-   **28.09.2024:**
+
+    -   Soluciones a los ejercicios prácticos 4.1 ya están disponibles
+    
+    -   Video del tercer día ya está disponble en la pestaña "Recursos"
+
 -   **21.09.2024:**
 
     -   Agregada la línea de código usando el comando `autofit` de `{flextable}` en la diapositiva 54 del primer módulo. `autofit` sirve para acomodar tablas de mejor manera al exportarlas a .docx
