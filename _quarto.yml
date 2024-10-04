@@ -33,6 +33,9 @@ website:
           - text: "Módulo 4"
             href: https://mmorenozam.github.io/biohack-modulo4/
             target: "_blank"
+          - text: "Módulo 5"
+            href: https://mmorenozam.github.io/biohack-modulo5/
+            target: "_blank"
       - text: Ejercicios
         menu:
           - text: "Demo"
@@ -43,6 +46,8 @@ website:
             href: ejercicios_m3.qmd
           - text: "Ejercicios Módulo 4"
             href: ejercicios_m4.qmd
+          - text: "Ejercicios Módulo 5"
+            href: ejercicios_m5.qmd
 format:
   html:
     theme:
