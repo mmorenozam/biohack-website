@@ -71,7 +71,7 @@ glc_rat <- c(108.7, 93.7, 52.7, 79.0, 74.7, 131.9, 99.5, 63.3, 98.6, 92.7)
 - [ ] [90.56{hint="x"}
 :::
 
-**5.    La siguiente tabla de datos (`blood`) tiene las medidas de presión sistólica de sangre correspondientes a 15 pacientes (columna "machine"). De acuerdo al Centro de Prevención y Control de Enfermedades de los Estados Unidos (CDC), una presión sistólica saludable está por debajo de 120 mm Hg. Determina si la media de la muestra contenida en esta tabla de datos estápor debajo de este valor sugerido por el CDC.**
+**5.    La siguiente tabla de datos (`blood`) tiene las medidas de presión sistólica de sangre correspondientes a 15 pacientes (columna "machine"). De acuerdo al Centro de Prevención y Control de Enfermedades de los Estados Unidos (CDC), una presión sistólica saludable está por debajo de 120 mm Hg. Determina si la media de la muestra contenida en esta tabla de datos está por debajo de este valor sugerido por el CDC.**
 
 ```{webr}
 #| setup: true
@@ -105,6 +105,24 @@ Chequea si la muestra es normalmente distribuida y decide si llevar a cabo un te
 
 ::: { .solution exercise="ex_a5" }
 
+Chequeamos normalidad
+
+```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
+library(UsingR) # donde se encuentra la tabla de datos de blood
+
+shapiro.test(blood$Machine)
+```
+
+Con un valor p mayor a 0.05 podemos concluir que la muestra está normalmente distribuida.
+
+Para probar la hipótesis (que la presión sistólica está por debajo del valor sugerido por el CDC de 120 mm Hg), usaremos una prueba t de una cola. Específicamente, la prueba de "inferioridad"
+
+```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
+t.test(blood$Machine, mu = 120, alternative = "less")
+```
+
+Con un valor p menor a 0.05, concluimos que la hipótesis nula es rechazada. En esta prueba la hipótesis nula establece que la media de la presión sistólica de estos pacientes está por encima del valor de 120. En otras palabras, la muestra de pacientes sugiere que corresponden a una población que no padece de presión alta.
+
 :::
 
 :::
@@ -129,6 +147,31 @@ Chequea si la muestra es normalmente distribuida y decide si llevar a cabo un te
 ## Solución
 
 ::: { .solution exercise="ex_a6" }
+
+Chequeamos normalidad
+
+```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
+library(UsingR) # donde se encuentra la tabla de datos de normtemp
+
+# normalidad de los datos de los hombres
+shapiro.test(subset(normtemp, gender == 1)$temperature)
+
+# normalidad de los datos de las mujeres
+shapiro.test(subset(normtemp, gender == 2)$temperature)
+```
+
+En ambos casos, con valores p mayor a 0.05 podemos concluir tanto las mediciones de temperatura de hombres y mujeres están normalmente distribuidas. Por lo tanto podemos aplicar una prueba t de muestras independientes.
+
+Recuerda que gracias a la corrección de Welch, no es necesario cumplir el supuesto de la homocedasticidad.
+
+```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
+t.test(subset(normtemp, gender == 1)$temperature, subset(normtemp, gender == 2)$temperature)
+
+# o tambien:
+t.test(normtemp$temperature ~ normtemp$gender)
+```
+
+Con un valor p menor a 0.05, concluimos que la hipótesis nula es rechazada. Es decir, existe diferencia estadísticamente significativa entre la media de temperatura entre hombres y mujeres. Donde, la temperatura media de los hombres es menor con respecto a la de las mujeres.
 
 :::
 
@@ -155,6 +198,26 @@ Chequea si la muestra es normalmente distribuida y decide si llevar a cabo un te
 
 ::: { .solution exercise="ex_a7" }
 
+Chequeamos la normalidad
+
+```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
+library(datarium) # donde se encuentra la tabla de datos mice2
+
+# normalidad de los datos antes de la dieta
+shapiro.test(mice2$before)
+
+# normalidad de los datos despues de la dieta
+shapiro.test(mice2$after)
+```
+
+Con valores p mayores a 0.05, podemos concluir que los datos están normalmente distribuidos. Cómo se tratan de observaciones tomadas de los mismos ratones antes y después de la dieta, entendemos que los datos están correlacionados. Por lo tanto, lo más conveniente es aplicar una prueba t de muestras emparejadas
+
+```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
+t.test(mice2$before, mice2$after, paired = T)
+```
+
+Con un valor p menor a 0.05, podemos concluir que existe una diferencia estadísticamente significativa en el peso de los ratones antes y después de la dieta en una media de 199.48 gramos
+
 :::
 
 :::
@@ -179,6 +242,25 @@ Chequea si la muestra es normalmente distribuida y decide si llevar a cabo un te
 ## Solución
 
 ::: { .solution exercise="ex_a8" }
+
+Chequeamos si los datos están normalmente distribuidos (aplicando las transformaciones logarítmica y raíz cuadrada, los datos se pueden normalizar. Asumamos por un instante que este no es el caso para ilustrar el uso de la prueba de Wilcoxon para datos que no están normalmente distribuidos).
+
+```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
+library(UsingR) # de donde provienen los datos de cancer de colon
+
+colon <- cancer$colon
+
+shapiro.test(colon)
+```
+
+Aplicamos la prueba de Wilcoxon para probar la hipótesis nula (que la media de supervivencia es de 370 días)
+
+```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
+wilcox.test(colon, mu = 370)
+```
+
+Como podemos, con un valor p mayor a 0.05, podemos concluir que la hipótesis alternativa se acepta. Es decir, que la media de supervivencia de esta muestra de pacientes con cáncer de colon es de 370 días.
+
 
 :::
 
