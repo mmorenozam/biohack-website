@@ -413,6 +413,7 @@ Antes de llevar a cabo tu análisis, ten en cuenta lo siguiente:
 ```{webr}
 #| exercise: ex_a10
 # Te recomiendo llevar a cabo estos ejercicios en tu computador.
+data("Ethanol")
 Ethanol
 ```
 
