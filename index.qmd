@@ -11,6 +11,16 @@ execute:
 ## Anuncios
 
 ::: {.callout-important}
+-   **17.10.2024:**
+
+    -   Video del quinto día ya está disponible en la pestaña "Recursos"
+    
+-   **05.10.2024**:
+
+    -   Soluciones a los ejercicios prácticos 5.1 ya están disponibles
+
+    -   Video del cuarto día ya está disponible en la pestaña "Recursos"
+
 -   **28.09.2024:**
 
     -   Soluciones a los ejercicios prácticos 4.1 ya están disponibles
