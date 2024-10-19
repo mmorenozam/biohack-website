@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.56">
@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introducción a la Estadística para Ciencias Biológicas con R</title>
+<title>Ejercicios Módulo 7 – Introducción a la Estadística para Ciencias Biológicas con R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -40,6 +74,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
+<link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -54,22 +90,24 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
-    "search-matching-documents-text": "documentos encontrados",
-    "search-copy-link-title": "Copiar el enlace en la búsqueda",
-    "search-hide-matches-text": "Ocultar resultados adicionales",
-    "search-more-match-text": "resultado adicional en este documento",
-    "search-more-matches-text": "resultados adicionales en este documento",
-    "search-clear-button-title": "Borrar",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Buscar"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
-<meta property="og:title" content="Introducción a la Estadística para Ciencias Biológicas con R">
+<meta property="og:title" content="Ejercicios Módulo 7 – Introducción a la Estadística para Ciencias Biológicas con R">
 <meta property="og:description" content="">
 <meta property="og:image" content="icon1.png">
 <meta property="og:site_name" content="Introducción a la Estadística para Ciencias Biológicas con R">
@@ -86,14 +124,14 @@ ul.task-list li input[type="checkbox"] {
     <img src="./icon1.png" alt="" class="navbar-logo">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Inicio</span></a>
   </li>  
   <li class="nav-item">
@@ -181,17 +219,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Contenido</h2>
    
   <ul>
-  <li><a href="#anuncios" id="toc-anuncios" class="nav-link active" data-scroll-target="#anuncios">Anuncios</a></li>
-  <li><a href="#descripción-del-curso" id="toc-descripción-del-curso" class="nav-link" data-scroll-target="#descripción-del-curso">Descripción del curso:</a></li>
-  <li><a href="#requisitos" id="toc-requisitos" class="nav-link" data-scroll-target="#requisitos">Requisitos:</a></li>
-  <li><a href="#duración" id="toc-duración" class="nav-link" data-scroll-target="#duración">Duración:</a></li>
-  <li><a href="#modalidad" id="toc-modalidad" class="nav-link" data-scroll-target="#modalidad">Modalidad:</a></li>
-  <li><a href="#horario" id="toc-horario" class="nav-link" data-scroll-target="#horario">Horario:</a></li>
-  <li><a href="#contenidos-del-curso" id="toc-contenidos-del-curso" class="nav-link" data-scroll-target="#contenidos-del-curso">Contenidos del curso</a></li>
-  <li><a href="#objetivos-de-aprendizaje" id="toc-objetivos-de-aprendizaje" class="nav-link" data-scroll-target="#objetivos-de-aprendizaje">Objetivos de aprendizaje:</a></li>
-  <li><a href="#evaluación-del-curso" id="toc-evaluación-del-curso" class="nav-link" data-scroll-target="#evaluación-del-curso">Evaluación del curso</a></li>
-  <li><a href="#canales-de-comunicación" id="toc-canales-de-comunicación" class="nav-link" data-scroll-target="#canales-de-comunicación">Canales de comunicación:</a></li>
-  <li><a href="#sobre-el-instructor" id="toc-sobre-el-instructor" class="nav-link" data-scroll-target="#sobre-el-instructor">Sobre el instructor</a></li>
+  <li><a href="#ejercicios-7.1" id="toc-ejercicios-7.1" class="nav-link active" data-scroll-target="#ejercicios-7.1">Ejercicios 7.1</a></li>
   </ul>
 </nav>
 </nav>
@@ -204,7 +232,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Introducción a la Estadística para Ciencias Biológicas con R</h1>
+<h1 class="title">Ejercicios Módulo 7</h1>
 </div>
 
 
@@ -221,255 +249,152 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="anuncios" class="level2">
-<h2 class="anchored" data-anchor-id="anuncios">Anuncios</h2>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Importante
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><p><strong>17.10.2024:</strong></p>
-<ul>
-<li>Video del quinto día ya está disponible en la pestaña “Recursos”</li>
-</ul></li>
-<li><p><strong>05.10.2024</strong>:</p>
-<ul>
-<li><p>Soluciones a los ejercicios prácticos 5.1 ya están disponibles</p></li>
-<li><p>Video del cuarto día ya está disponible en la pestaña “Recursos”</p></li>
-</ul></li>
-<li><p><strong>28.09.2024:</strong></p>
-<ul>
-<li><p>Soluciones a los ejercicios prácticos 4.1 ya están disponibles</p></li>
-<li><p>Video del tercer día ya está disponble en la pestaña “Recursos”</p></li>
-</ul></li>
-<li><p><strong>21.09.2024:</strong></p>
-<ul>
-<li><p>Agregada la línea de código usando el comando <code>autofit</code> de <code>{flextable}</code> en la diapositiva 54 del primer módulo. <code>autofit</code> sirve para acomodar tablas de mejor manera al exportarlas a .docx</p></li>
-<li><p>Soluciones a los ejercicios prácticos 3.1 ya están disponibles.</p></li>
-<li><p>Video del segundo día ya está disponible en la pestaña “Recursos”</p></li>
-</ul></li>
-<li><p><strong>15.09.2024:</strong></p>
-<ul>
-<li><p>Error en el numeral 1 de Ejercicios 1.2 está corregido. Soluciones a los numerales 4 y 5 de Ejercicios 1.2 están ya disponibles.</p></li>
-<li><p>Procedimiento para establecer la referencia de un factor ya está disponible en las diapositivas del módulo 1.</p></li>
-<li><p>Video del primer día ya está disponible en la pestaña “Recursos”</p></li>
-</ul></li>
-<li><p><strong>14.09.2024:</strong> Bienvenidos al curso! antes de comenzar, una de las mejores oportunidades de aprender más acerca de R, es atender a sus conferencias. Afortunadament la conferencia de <a href="https://latinr.org/" target="_blank">LatinR2024</a> está próxima a darse a cabo en Noviembre de este año. <!-- Note that there are five types of callouts, including: --> <!-- `note`, `warning`, `important`, `tip`, and `caution`. --></p></li>
-</ul>
-</div>
-</div>
-</section>
-<section id="descripción-del-curso" class="level2">
-<h2 class="anchored" data-anchor-id="descripción-del-curso">Descripción del curso:</h2>
-<p>El presente curso de estadística tiene cómo propósito el dar un enfoque práctico de metodologías estadísticas comúnmente empleadas en el campo de la biología y la agricultura sin hacer mayor énfasis en teoría y resolución de problemas a mano como usualmente ocurre en el desenvolvimiento de contenidos de cursos tradicionales en estadística. En su lugar, el currículum aquí propuesto busca el dar una visión práctica a sus participantes de cómo los datos pueden ser analizados en base a un orden cronológico dentro de una investigación empezando por la definición de la pregunta objeto de esta, pasando por la decisión del diseño experimental más adecuado y finalizando con su correcto análisis e interpretación de los resultados. En mayor detalle, se abarcan además problemas comunes en el análisis de datos como lo son los análisis exploratorios de carácter formal tales como estadísticos descriptivos, patrones de pérdida de observaciones y visualizaciones; y aquellos de carácter operacional como la preparación y limpieza de datos, buenas prácticas de documentación y programación. Es por ello por lo que se alienta a los participantes a usar sus propios datos a la par de los ejemplos que se pondrán a disposición con el fin de aprovechar el carácter práctico del curso que incluye un comprensivo recorrido en el uso de R, el cual es al momento el lenguaje de programación estadística de mayor predilección en diversas ramas de las ciencias biológicas tanto en la academia como en la industria.</p>
-</section>
-<section id="requisitos" class="level2">
-<h2 class="anchored" data-anchor-id="requisitos">Requisitos:</h2>
-<ul>
-<li>Computador con al menos 2 GB de RAM y <strong>procesador de 64 bits</strong></li>
-</ul>
-</section>
-<section id="duración" class="level2">
-<h2 class="anchored" data-anchor-id="duración">Duración:</h2>
-<p>20 horas de clase repartidas en 8 sesiones de 2 horas y media cada una, y</p>
-<p>20 horas autónomo-prácticas, dando un total de</p>
-<p><strong>40 horas</strong></p>
-</section>
-<section id="modalidad" class="level2">
-<h2 class="anchored" data-anchor-id="modalidad">Modalidad:</h2>
-<p>100% Online</p>
-</section>
-<section id="horario" class="level2">
-<h2 class="anchored" data-anchor-id="horario">Horario:</h2>
-<p>Sábados: 14, 21, 28 de Septiembre, 5, 19 y 26 de Octubre de 9H00 a 12H00</p>
-<p>Unica clase entre semana: Jueves 17 de Octubre de 18H30 a 20H30</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Nota
+Notas
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>No hay clase el Sábado 12 de Octubre debido al feriado.</strong> La clase se recupera el 17 de 18H30 a 20H30. <!-- Note that there are five types of callouts, including: --> <!-- `note`, `warning`, `important`, `tip`, and `caution`. --></p>
+<ul>
+<li>Para los Ejercicios 7.1, usaremos la tabla de datos “carpitas”</li>
+</ul>
 </div>
 </div>
-</section>
-<section id="contenidos-del-curso" class="level2">
-<h2 class="anchored" data-anchor-id="contenidos-del-curso">Contenidos del curso</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 53%">
-<col style="width: 46%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Módulo</th>
-<th>Contenido</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><p>Módulo 1: Generalidades e Introducción a R</p>
-<p>Duración: 2 horas</p></td>
-<td><ol type="1">
-<li><p>Generalidades</p></li>
-<li><p>Introducción a R</p></li>
-<li><p>Tipos de datos en R</p></li>
-<li><p>Operadores en R</p></li>
-<li><p>Tipos de objetos en R</p></li>
-<li><p>Paquetes y librerías</p></li>
-<li><p>Operaciones básicas</p></li>
-<li><p>Operaciones estadísticas básicas</p></li>
-<li><p>Estadísticos descriptivos</p></li>
-</ol></td>
-</tr>
-<tr class="even">
-<td><p>Módulo 2: Proyectos en R y buenas prácticas de programación</p>
-<p>Duración: 0.5 horas</p></td>
-<td><ol type="1">
-<li><p>Proyectos en R</p></li>
-<li><p>Reglas básicas para programar y nombrar objetos en R</p></li>
-<li><p>Buenas prácticas de programación</p></li>
-</ol></td>
-</tr>
-<tr class="odd">
-<td><p>Módulo 3: Introducción al <code>{tidyverse}</code></p>
-<p>Duración: 2.5 horas</p></td>
-<td><ol type="1">
-<li><p>Tipos de tablas</p></li>
-<li><p>Tidy data</p></li>
-<li><p>El <code>{tidyverse}</code></p></li>
-<li><p>Importación y exportación de datos</p></li>
-<li><p>Operaciones con tablas de datos</p></li>
-</ol></td>
-</tr>
-<tr class="even">
-<td><p>Módulo 4: Visualización de datos con <code>{ggplot2}</code></p>
-<p>Duración: 2.5 horas</p></td>
-<td><ol type="1">
-<li><p>Funciones de <code>{ggplot2}</code></p></li>
-<li><p>Geometrías</p></li>
-<li><p>Estéticas de geometrías</p></li>
-<li><p>Formato de figuras</p></li>
-<li><p>Análisis Exploratorio</p></li>
-</ol></td>
-</tr>
-<tr class="odd">
-<td><p>Módulo 5: Introducción a la Estadística Inferencial con R</p>
-<p>Duración: 5 horas</p></td>
-<td><ol type="1">
-<li><p>Muestras, poblaciones y muestreos</p></li>
-<li><p>Parámetros poblaciones y de muestro</p></li>
-<li><p>Estimación de parámetros de población.</p></li>
-<li><p>Intervalos de confianza</p></li>
-<li><p>Pruebas de hipótesis</p></li>
-<li><p>Tipos de errores</p></li>
-<li><p>Poder de una prueba estadística</p></li>
-<li><p>Tamaño del efecto</p></li>
-<li><p>Colas de una prueba</p></li>
-<li><p>Pruebas estadísticas paramétricas simples</p></li>
-<li><p>Pruebas estadísticas no paramétricas</p></li>
-<li><p>Introducción al Análisis de Varianza (ANOVA)</p></li>
-</ol></td>
-</tr>
-<tr class="even">
-<td><p>Módulo 6: Principios básicos de Diseño de Experimentos</p>
-<p>Duración: 2.5 horas</p></td>
-<td><ol type="1">
-<li><p>Tipos de estudios</p></li>
-<li><p>Pilares del diseño de experimentos</p></li>
-<li><p>Repeticiones</p></li>
-<li><p>Tamaño de muestra</p></li>
-<li><p>Diseño Completamente al Azar (DCA)</p></li>
-<li><p>Diseño en Bloques Completamente al Azar (DBCA)</p></li>
-<li><p>Diseño Factorial Completo (DFC)</p></li>
-<li><p>Diseño Cuadrado Latino (DCL)</p></li>
-<li><p>Otros diseños experimentales</p></li>
-</ol></td>
-</tr>
-<tr class="odd">
-<td><p>Módulo 7: Otros métodos estadísticos comúnmente usados en Biología</p>
-<p>Duración: 3 horas</p></td>
-<td><ol type="1">
-<li><p>Regresión lineal simple y múltiple</p></li>
-<li><p>Introducción a modelos lineales generalizados</p></li>
-<li><p>Análisis de componentes principales</p></li>
-</ol></td>
-</tr>
-<tr class="even">
-<td><p>Módulo 8: Introducción a la creación de reportes con Quarto</p>
-<p>Duración: 2 horas</p></td>
-<td><ol type="1">
-<li><p>Introducción a Quarto y Rmarkdown</p></li>
-<li><p>Estructura de un documento de Quarto</p></li>
-<li><p>Generación de nuestro primer reporte</p></li>
-<li><p>Tipos de documentos en Quarto</p></li>
-</ol></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="objetivos-de-aprendizaje" class="level2">
-<h2 class="anchored" data-anchor-id="objetivos-de-aprendizaje">Objetivos de aprendizaje:</h2>
-<p>Al término del curso, el estudiante deberá ser capaz de:</p>
+<section id="ejercicios-7.1" class="level2">
+<h2 class="anchored" data-anchor-id="ejercicios-7.1">Ejercicios 7.1</h2>
+<p><strong>La tabla de datos “carpitas” contiene información del censo de corrientes biológicas de Maryland. En esta, se recogen datos obtenidos de la población de carpitas rinconeras (<em>Rhinichthys cataractae</em>) en varias corrientes de agua de ese estado en USA. La descripción de esta tabla de datos es la siguiente:</strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <ul>
-<li><p>Realizar operaciones básicas en R, tales como: cargar, modificar, limpiar y guardar tablas de datos.</p></li>
-<li><p>Realizar gráficos de manera profesional usando R.</p></li>
-<li><p>Planificar y decidir que tipo de diseño experimental deberá usar para llevar a cabo un estudio, dependiendo de la hipótesis del mismo.</p></li>
-<li><p>Llevar a cabo análisis exploratorio de datos.</p></li>
-<li><p>Llevar a cabo, interpretar y reportar los resultados de metodologías estadísticas tales como: pruebas t, pruebas no paramétricas y análisis de varianza.</p></li>
-<li><p>Realizar reportes estadísticos básicos en R.</p></li>
+<li><p><code>Stream</code>: nombre de la corriente de agua</p></li>
+<li><p><code>longnose</code>: número de carpitas/75 metros de corriente</p></li>
+<li><p><code>acerage</code>: área (acres) drenada por la corriente</p></li>
+<li><p><code>DO2</code>: oxígeno disuelto (mg/L)</p></li>
 </ul>
-</section>
-<section id="evaluación-del-curso" class="level2">
-<h2 class="anchored" data-anchor-id="evaluación-del-curso">Evaluación del curso</h2>
-<p>Para aprobar el curso, el estudiante tendrá la posibilidad de optar entre las siguientes opciones:</p>
-<p><strong>Opción 1:</strong></p>
-<p>Dos semanas antes del término de curso estará disponible en el servidor de Moodle una evaluación final de todo lo cubierto en los distintos módulos del mismo, abierta para su resolución hasta el 16 de Noviembre de 2024.</p>
-<p><strong>Opción 2:</strong></p>
-<p>Presentación de un reporte estadístico con datos del estudiante o citando la fuente de los mismos. La estructura de este tipo de reporte deberá seguir las instrucciones detalladas en el módulo del curso pertinente a la preparación y elaboración de reportes en R. La fecha límite de entrega de esta opción es hasta el 16 de Noviembre de 2024 a la dirección de correo del instructor.</p>
-</section>
-<section id="canales-de-comunicación" class="level2">
-<h2 class="anchored" data-anchor-id="canales-de-comunicación">Canales de comunicación:</h2>
+</div><div class="column" style="width:50%;">
 <ul>
-<li><p>Preguntas durante las sesiones</p></li>
-<li><p>Consultas dirigidas al instructor al correo electrónico: mmorenozambrano@gmail.com</p></li>
+<li><p><code>maxdepth</code>: profundidad máxima (cm)</p></li>
+<li><p><code>NO3</code>: concentración de nitrato (mg/L)</p></li>
+<li><p><code>SO4</code>: concentración de sulfato (mg/L)</p></li>
+<li><p><code>temp</code>: temperatura del agua</p></li>
 </ul>
-</section>
-<section id="sobre-el-instructor" class="level2">
-<h2 class="anchored" data-anchor-id="sobre-el-instructor">Sobre el instructor</h2>
-<p>Mauricio Moreno, PhD</p>
-<p>Ingeniero en Biotecnología (Universidad de las Fuerzas Armadas - ESPE), cuenta con un máster en Estadística con mención en Biometría (KU Leuven, Bélgica) y un doctorado en Bioinformática (Jacobs University Bremen, Alemania), posee más de diez años de experiencia en programación estadística en R. Ha trabajado como consultor independiente, profesor, analista de estadísticas ambientales e investigador postdoctoral. Actualmente, ocupa el puesto de Científico Bioestadístico en la función de Soluciones de Campo en Bayer Crop Science, liderando proyectos de investigación y desarrollo incluyendo la migración de procesos estadísticos a la nube y determinación de tamaños de muestra mediante simulaciones Montecarlo basados en cadenas de Markov.</p>
+</div>
+</div>
+<p><strong>Los datos se encuentran en el siguiente cuadro de código. Copia, pega y ejecuta el mismo en tu sesión de R que la tengas disponible para este ejercicio.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Input <span class="ot">=</span> (<span class="st">"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="st">Stream                   longnose  acerage  DO2   maxdepth  NO3   SO4     temp</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="st">BASIN_RUN                  13         2528    9.6  80        2.28  16.75   15.3</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">BEAR_BR                    12         3333    8.5  83        5.34   7.74   19.4</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">BEAR_CR                    54        19611    8.3  96        0.99  10.92   19.5</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">BEAVER_DAM_CR              19         3570    9.2  56        5.44  16.53   17</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="st">BEAVER_RUN                 37         1722    8.1  43        5.66   5.91   19.3</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="st">BENNETT_CR                  2          583    9.2  51        2.26   8.81   12.9</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">BIG_BR                     72         4790    9.4  91        4.1    5.65   16.7</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">BIG_ELK_CR                164        35971   10.2  81        3.2   17.53   13.8</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">BIG_PIPE_CR                18        25440    7.5  120       3.53   8.2    13.7</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">BLUE_LICK_RUN               1         2217    8.5  46        1.2   10.85   14.3</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="st">BROAD_RUN                  53         1971   11.9  56        3.25  11.12   22.2</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="st">BUFFALO_RUN                16        12620    8.3  37        0.61  18.87   16.8</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="st">BUSH_CR                    32        19046    8.3  120       2.93  11.31   18</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="st">CABIN_JOHN_CR              21         8612    8.2  103       1.57  16.09   15</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">CARROLL_BR                 23         3896   10.4  105       2.77  12.79   18.4</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="st">COLLIER_RUN                18         6298    8.6  42        0.26  17.63   18.2</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="st">CONOWINGO_CR              112        27350    8.5  65        6.95  14.94   24.1</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="st">DEAD_RUN                   25         4145    8.7  51        0.34  44.93   23</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="st">DEEP_RUN                    5         1175    7.7  57        1.3   21.68   21.8</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="st">DEER_CR                    26         8297    9.9  60        5.26  6.36    19.1</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="st">DORSEY_RUN                  8         7814    6.8  160       0.44  20.24   22.6</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="st">FALLS_RUN                  15         1745    9.4  48        2.19  10.27   14.3</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="st">FISHING_CR                 11         5046    7.6  109       0.73   7.1    19</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="st">FLINTSTONE_CR              11        18943    9.2  50        0.25  14.21   18.5</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="st">GREAT_SENECA_CR            87         8624    8.6  78        3.37   7.51   21.3</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="st">GREENE_BR                  33         2225    9.1  41        2.3    9.72   20.5</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="st">GUNPOWDER_FALLS            22        12659    9.7  65        3.3    5.98   18</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="st">HAINES_BR                  98         1967    8.6  50        7.71  26.44   16.8</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="st">HAWLINGS_R                  1         1172    8.3  73        2.62   4.64   20.5</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="st">HAY_MEADOW_BR               5          639    9.5  26        3.53   4.46   20.1</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="st">HERRINGTON_RUN              1         7056    6.4  60        0.25   9.82   24.5</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="st">HOLLANDS_BR                38         1934   10.5  85        2.34  11.44   12</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="st">ISRAEL_CR                  30         6260    9.5  133       2.41  13.77   21</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="st">LIBERTY_RES                12          424    8.3  62        3.49   5.82   20.2</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_ANTIETAM_CR         24         3488    9.3  44        2.11  13.37   24</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_BEAR_CR              6         3330    9.1  67        0.81   8.16   14.9</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_CONOCOCHEAGUE_CR    15         2227    6.8  54        0.33   7.6    24</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_DEER_CR             38         8115    9.6  110       3.4    9.22   20.5</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_FALLS               84         1600   10.2  56        3.54   5.69   19.5</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_GUNPOWDER_R          3        15305    9.7  85        2.6    6.96   17.5</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_HUNTING_CR          18         7121    9.5  58        0.51   7.41   16</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="st">LITTLE_PAINT_BR            63         5794    9.4  34        1.19  12.27   17.5</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="st">MAINSTEM_PATUXENT_R       239         8636    8.4  150       3.31   5.95   18.1</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="st">MEADOW_BR                 234         4803    8.5  93        5.01  10.98   24.3</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="st">MILL_CR                     6         1097    8.3  53        1.71  15.77   13.1</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="st">MORGAN_RUN                 76         9765    9.3  130       4.38   5.74   16.9</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="st">MUDDY_BR                   25         4266    8.9  68        2.05  12.77   17</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="st">MUDLICK_RUN                 8         1507    7.4  51        0.84  16.3    21</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="st">NORTH_BR                   23         3836    8.3  121       1.32   7.36   18.5</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="st">NORTH_BR_CASSELMAN_R       16        17419    7.4  48        0.29   2.5    18</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="st">NORTHWEST_BR                6         8735    8.2  63        1.56  13.22   20.8</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="st">NORTHWEST_BR_ANACOSTIA_R  100        22550    8.4  107       1.41  14.45   23</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="st">OWENS_CR                   80         9961    8.6  79        1.02   9.07   21.8</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="st">PATAPSCO_R                 28         4706    8.9  61        4.06   9.9    19.7</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="st">PINEY_BR                   48         4011    8.3  52        4.7    5.38   18.9</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="st">PINEY_CR                   18         6949    9.3  100       4.57  17.84   18.6</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="st">PINEY_RUN                  36        11405    9.2  70        2.17  10.17   23.6</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="st">PRETTYBOY_BR               19          904    9.8  39        6.81   9.2    19.2</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="st">RED_RUN                    32         3332    8.4  73        2.09   5.5    17.7</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="st">ROCK_CR                     3          575    6.8  33        2.47   7.61   18</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a><span class="st">SAVAGE_R                  106        29708    7.7  73        0.63  12.28   21.4</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a><span class="st">SECOND_MINE_BR             62         2511   10.2  60        4.17  10.75   17.7</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a><span class="st">SENECA_CR                  23        18422    9.9  45        1.58   8.37   20.1</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="st">SOUTH_BR_CASSELMAN_R        2         6311    7.6  46        0.64  21.16   18.5</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="st">SOUTH_BR_PATAPSCO          26         1450    7.9  60        2.96   8.84   18.6</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="st">SOUTH_FORK_LINGANORE_CR    20         4106   10.0  96        2.62   5.45   15.4</span></span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="st">TUSCARORA_CR               38        10274    9.3  90        5.45  24.76   15</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="st">WATTS_BR                   19          510    6.7  82        5.25  14.19   26.5</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>carpitas <span class="ot">=</span> <span class="fu">read.table</span>(<span class="fu">textConnection</span>(Input),<span class="at">header=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Con todo lo aprendido con respecto a la regresión lineal múltiple y las regresiones de Poisson/negativa binomial:</strong></p>
+<p><strong>1. Selecciona variables usando una regresión lineal múltiple como inicio (full model) para explicar el número de carpitas (<code>longnose</code>)</strong></p>
+<p><strong>2. Mejora el modelo de ser necesario (transformación de datos, remoción de outliers)</strong></p>
+<p><strong>3. A partir de tu modelo seleccionado, modela <code>longnose</code> usando las distribuciones de Poisson y binomial negativa</strong></p>
+<p><strong>4. Evalúa tus modelos y determina cual seleccionarías finalmente</strong></p>
 
 
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<div id="exercise-loading-indicator" class="exercise-loading-indicator d-none d-flex align-items-center gap-2">
+<div id="exercise-loading-status" class="d-flex gap-2">
+
+</div>
+<div class="spinner-grow spinner-grow-sm">
+
+</div>
+</div>
+<script type="vfs-file">
+W10=
+</script>
 </section>
 
 </main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W119
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -513,12 +438,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copiado");
+    button.setAttribute("title", "Copied!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copiado");
+      button.setAttribute("data-bs-title", "Copied!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",
