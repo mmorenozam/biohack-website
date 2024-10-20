@@ -550,7 +550,7 @@ cld(tukey_comps)
 
 :::
 
-**2.    Lleva a cabo un ANOVA de dos vías no aditivo con los datos `Ethanol` de `{Stat2Data}`. Estos datos corresponden a un experimento que fue diseñado con el fin de comparar el efecto ihnibitorio del oxígeno sobre el metabolismo de dos tipos distintos de azúcar (glucosa y galactosa) por parte de bacterias *Streptococuss* usando cuantro niveles distintos de oxígeno.**
+**2.    Lleva a cabo un ANOVA de dos vías no aditivo con los datos `BirdCalcium` de `{Stat2Data}`. Estos datos corresponden a las mediciones de calcio en el plasma de petirrojos. 10 petirrojos macho y 10 petirrojos hembras fueron divididos en grupos de 5. A 5 aves de cada sexo les fueron suministradas hormonas, mientras que a las 5 restantes se les suministró una dieta control. La pregunta de investigación consistió en determinar si posibles variaciones de calcio en estas aves dependen del sexo, hormonas o una interacción de estas**
 
 ::: {.panel-tabset}
 
@@ -559,8 +559,8 @@ cld(tukey_comps)
 ```{webr}
 #| exercise: ex_a10
 # Te recomiendo llevar a cabo estos ejercicios en tu computador.
-data("Ethanol")
-Ethanol
+data("BirdCalcium")
+BirdCalcium
 ```
 
 ## Hints
@@ -587,29 +587,28 @@ Aquí, una consideración importante. Es necesario que le dejemos saber a R que 
 library(Stat2Data)
 library(ggplot2)
 library(patchwork)
-data("Ethanol")
-Ethanol$O2Conc <- as.factor(Ethanol$O2Conc)
-p1 <- Ethanol |>
-  ggplot(aes(x = Sugar, y = Ethanol)) +
+data("BirdCalcium")
+p1 <- BirdCalcium |>
+  ggplot(aes(x = Sex, y = Ca)) +
   geom_boxplot()
-p2 <- Ethanol |>
-  ggplot(aes(x = O2Conc, y = Ethanol)) +
+p2 <- BirdCalcium |>
+  ggplot(aes(x = Hormone, y = Ca)) +
   geom_boxplot()
 p1+p2
 ```
 
-A un primer vistazo, que existen diferencias en la producción de etanol cuando estas bacterias están en un medio con galactosa o glucosa así como también en cuanto a la disponibilidad de oxígeno.
+A un primer vistazo, podemos esperar a encontrar diferencias estadísticamente significativas entre los niveles de calcio determinados por la presencia de hormonas en la dieta, pero no tanto con respecto al sexo de los petirrojos.
 
 **2.    Llevo a cabo el ANOVA de una vía y chequeo los supuestos**
 
 ```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
 library(car)
-etho <- lm(Ethanol ~ Sugar * O2Conc, data = Ethanol)
+bird <- lm(Ca ~ Sex * Hormone, data = BirdCalcium)
 # normalidad de los residuales
-residuos <- etho$residuals
+residuos <- bird$residuals
 shapiro.test(residuos)
 # homogeneidad de la varianza
-leveneTest(etho)
+leveneTest(bird)
 ```
 
 Veo que ambos supuestos se cumplen.
@@ -618,25 +617,25 @@ Veo que ambos supuestos se cumplen.
 **3.    Interpreto mi ANOVA**
 
 ```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
-Anova(etho)
+Anova(bird)
 ```
 
-En este caso, solo uno de los efectos principales es significativo: `Sugar`
+En este caso, solo uno de los efectos principales es significativo: `Hormone`. La interacción y el sexo de los petirrojos no influyen en diferencias de la concentración de calcio en su plasma sanguíneo.
 
 **5.    Llevo a cabo gráficos de interacción**
 
 ```{r echo=T, eval=T, error=T, fig.align = 'center', message=F, warning=F}
 library(emmeans)
-p3 <- emmip(etho, Sugar ~ O2Conc)
-p4 <- emmip(etho, O2Conc ~ Sugar)
+p3 <- emmip(bird, Sex ~ Hormone)
+p4 <- emmip(bird, Hormone ~ Sex)
 p3 + p4
 ```
 
-Reafirmamos que la interacción no es significativa ya que las líneas de interacción si se llegasen a encontrar, esto sucedería a predicciones de etanol negativas.
+Como vemos en los gráficos de interacción, las líneas de interacción paralelas. Algo que era de esperarse al ya haber visto en la tabla del ANOVA que el valor p de la interacción fue mayor a 0.05.
 
 **4.    Llevo a cabo comparaciones múltiples**
 
-En este caso ya no resulta necesario, como el efecto principal que estadísticamente significativo y este posee únicamente dos niveles, es fácil distinguir a partir del primer gráfico que hicimos en nuestro breve análisis exploratorio que las bacterias en un medio de cultivo de glucosa producen más etanol con significancia estadística que con respecto a las que crecen en un medio con galactosa.
+En este caso ya no resulta necesario por cuanto el efecto principal que estadísticamente es significativo posee únicamente dos niveles, es fácil distinguir a partir del primer gráfico que hicimos en nuestro breve análisis exploratorio la inclusión de hormonas en la dieta de los petirrojos determina un incremento de Ca en su plasma sanguíneo.
 
 :::
 

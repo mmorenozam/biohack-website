@@ -11,6 +11,14 @@ execute:
 ## Anuncios
 
 ::: {.callout-important}
+-   **19.10.2024:**
+
+    -   Soluciones a los ejercicios prácticos 5.2 ya están disponibles.
+    
+    -   Cambié el segundo ejercicio de los ejercicios prácticos 5.2 ya que me di cuenta que confundí la tabla de datos a utilizar para el mismo. 
+    
+    -   Video del sexto día ya está disponible en la pestaña "Recursos"
+
 -   **17.10.2024:**
 
     -   Video del quinto día ya está disponible en la pestaña "Recursos"
