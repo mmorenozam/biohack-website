@@ -139,3 +139,6 @@ carpitas = read.table(textConnection(Input),header=TRUE)
 
 **4.    Evalúa tus modelos y determina cual seleccionarías finalmente**
 
+## Ejercicios 7.2
+
+**Lleva a cabo APCs con las tablas de datos `mtcars` e `iris` (ambas son bases de datos de R base). Para `mtcars` usa como etiquetas los nombres de los autos y como variable de agrupamiento la variable `gear`. Para `iris`, usa como variable de agrupamiento la variable `Species`**
