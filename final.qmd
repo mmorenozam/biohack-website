@@ -32,5 +32,47 @@ Presentación de un reporte estadístico con datos que proporciono a continuaci�
 
 ## Datos para la opción 2
 
-Deberás usar la tabla de datos `community-health-evaluation-dataset`
+Deberás usar la tabla de datos `community-health-evaluation-dataset`, para cargarla en tu sesión de R, usa el siguiente código
 
+```{r, echo=T, eval=F}
+git_url <- "https://raw.githubusercontent.com/mmorenozam/biohack-website/refs/heads/main/data/community_health_evaluation_dataset.csv"
+
+df_health <- read.csv(git_url)
+```
+
+Esta tabla comprende datos cuyo gol es el de evaluar servicios de salud comunitarios y su calidad de atención. Cada fila representa información de un paciente único. Las variables son:
+
+`Participant.ID`: identificador único de cada paciente
+
+`Age`: edad del participante.
+
+`Gender`: género ("M": masculino, "F": femenino).
+
+`SES`: estado socioeconómico en escala del 1 al 4.
+
+`Service.Type`: tipo de servicio de salud accedido por el participante.
+
+`Visit.Frequency`: frecuencia de las visitas al doctor
+
+`Step.Frequency..steps.min.`: media del número de pasos tomados por minuto.
+
+`Stride.Length..m.`: media de la longitud de un paso, medida en metros.
+
+`Joint.Angle....`: media del ángulo durante el movimiento, medida en grados.
+
+`EMG.Activity`: nivel de la actividad muscular medida por electromiografía.
+
+`Patient.Satisfaction..1.10.`: nivel de satisfacción del participante, medido en una escal del 1 al 10.
+
+`Quality.of.Life.Score`: medida de la calidad de vida del participante entre 50 y 100
+
+Para trabajar con estos datos, es necesario que pienses y formules hipótesis de investigación podrían servir como buenos indicadores de la calidad de los servicios sanitarios. 
+
+El análisis de datos deberá incluir al menos:
+
+1.    Aplicación de ANOVA de una vía
+2.    Aplicación de ANOVA de dos vías con interacción
+3.    Modelamiento de una regresión múltiple
+4.    Aplicación de análisis de componentes principales
+
+En caso de cualquier duda, siéntete libre de contactarme.

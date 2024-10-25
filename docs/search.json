@@ -256,7 +256,7 @@
     "href": "final.html#generalidades",
     "title": "Trabajo final",
     "section": "Generalidades",
-    "text": "Generalidades\nIndependientemente de la opción que escoja el estudiante, el trabajo final deberá ser presentado de la siguiente manera:\n\nEn forma de un archivo .zip conteniendo el proyecto de RStudio con todos los scripts usados para renderizar el trabajo final. No hace falta adjuntar los datos usados para el análisis.\nEl archivo final renderizado puede ser presentado en formatos .pdf, .docx o .html\nEl plazo final para la entrega del trabajo a mi correo electrónico (mmorenozambrano@gmail.com) es el 23 de Noviembre, 23H59 hora de Ecuador."
+    "text": "Generalidades\nIndependientemente de la opción que escoja el estudiante, el trabajo final deberá ser presentado de la siguiente manera:\n\nEn forma de un archivo .zip conteniendo el proyecto de RStudio con todos los scripts usados para renderizar el trabajo final. No hace falta adjuntar los datos usados para el análisis.\nEl archivo final renderizado puede ser presentado en formatos .pdf, .docx o .html\nEl plazo final para la entrega del trabajo a mi correo electrónico (mmorenozambrano@gmail.com) es el 30 de Noviembre, 23H59 hora de Ecuador."
   },
   {
     "objectID": "final.html#opciones-de-trabajo-final",
@@ -270,6 +270,6 @@
     "href": "final.html#datos-para-la-opción-2",
     "title": "Trabajo final",
     "section": "Datos para la opción 2",
-    "text": "Datos para la opción 2\nDeberás usar la tabla de datos community-health-evaluation-dataset"
+    "text": "Datos para la opción 2\nDeberás usar la tabla de datos community-health-evaluation-dataset, para cargarla en tu sesión de R, usa el siguiente código\n\ngit_url &lt;- \"https://raw.githubusercontent.com/mmorenozam/biohack-website/refs/heads/main/data/community_health_evaluation_dataset.csv\"\n\ndf_health &lt;- read.csv(git_url)\n\nEsta tabla comprende datos cuyo gol es el de evaluar servicios de salud comunitarios y su calidad de atención. Cada fila representa información de un paciente único. Las variables son:\nParticipant.ID: identificador único de cada paciente\nAge: edad del participante.\nGender: género (“M”: masculino, “F”: femenino).\nSES: estado socioeconómico en escala del 1 al 4.\nService.Type: tipo de servicio de salud accedido por el participante.\nVisit.Frequency: frecuencia de las visitas al doctor\nStep.Frequency..steps.min.: media del número de pasos tomados por minuto.\nStride.Length..m.: media de la longitud de un paso, medida en metros.\nJoint.Angle....: media del ángulo durante el movimiento, medida en grados.\nEMG.Activity: nivel de la actividad muscular medida por electromiografía.\nPatient.Satisfaction..1.10.: nivel de satisfacción del participante, medido en una escal del 1 al 10.\nQuality.of.Life.Score: medida de la calidad de vida del participante entre 50 y 100\nPara trabajar con estos datos, es necesario que pienses y formules hipótesis de investigación podrían servir como buenos indicadores de la calidad de los servicios sanitarios.\nEl análisis de datos deberá incluir al menos:\n\nAplicación de ANOVA de una vía\nAplicación de ANOVA de dos vías con interacción\nModelamiento de una regresión múltiple\nAplicación de análisis de componentes principales\n\nEn caso de cualquier duda, siéntete libre de contactarme."
   }
 ]

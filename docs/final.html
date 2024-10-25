@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -240,7 +274,7 @@ Important
 <ol type="1">
 <li><p>En forma de un archivo .zip conteniendo el proyecto de RStudio con todos los scripts usados para renderizar el trabajo final. <strong>No hace falta adjuntar los datos usados para el análisis</strong>.</p></li>
 <li><p>El archivo final renderizado puede ser presentado en formatos .pdf, .docx o .html</p></li>
-<li><p>El plazo final para la entrega del trabajo a mi correo electrónico (mmorenozambrano@gmail.com) es el 23 de Noviembre, 23H59 hora de Ecuador.</p></li>
+<li><p>El plazo final para la entrega del trabajo a mi correo electrónico (mmorenozambrano@gmail.com) es el <strong>30 de Noviembre, 23H59 hora de Ecuador</strong>.</p></li>
 </ol>
 </section>
 <section id="opciones-de-trabajo-final" class="level2">
@@ -253,7 +287,34 @@ Important
 </section>
 <section id="datos-para-la-opción-2" class="level2">
 <h2 class="anchored" data-anchor-id="datos-para-la-opción-2">Datos para la opción 2</h2>
-<p>Deberás usar la tabla de datos <code>community-health-evaluation-dataset</code></p>
+<p>Deberás usar la tabla de datos <code>community-health-evaluation-dataset</code>, para cargarla en tu sesión de R, usa el siguiente código</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git_url <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/mmorenozam/biohack-website/refs/heads/main/data/community_health_evaluation_dataset.csv"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df_health <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(git_url)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Esta tabla comprende datos cuyo gol es el de evaluar servicios de salud comunitarios y su calidad de atención. Cada fila representa información de un paciente único. Las variables son:</p>
+<p><code>Participant.ID</code>: identificador único de cada paciente</p>
+<p><code>Age</code>: edad del participante.</p>
+<p><code>Gender</code>: género (“M”: masculino, “F”: femenino).</p>
+<p><code>SES</code>: estado socioeconómico en escala del 1 al 4.</p>
+<p><code>Service.Type</code>: tipo de servicio de salud accedido por el participante.</p>
+<p><code>Visit.Frequency</code>: frecuencia de las visitas al doctor</p>
+<p><code>Step.Frequency..steps.min.</code>: media del número de pasos tomados por minuto.</p>
+<p><code>Stride.Length..m.</code>: media de la longitud de un paso, medida en metros.</p>
+<p><code>Joint.Angle....</code>: media del ángulo durante el movimiento, medida en grados.</p>
+<p><code>EMG.Activity</code>: nivel de la actividad muscular medida por electromiografía.</p>
+<p><code>Patient.Satisfaction..1.10.</code>: nivel de satisfacción del participante, medido en una escal del 1 al 10.</p>
+<p><code>Quality.of.Life.Score</code>: medida de la calidad de vida del participante entre 50 y 100</p>
+<p>Para trabajar con estos datos, es necesario que pienses y formules hipótesis de investigación podrían servir como buenos indicadores de la calidad de los servicios sanitarios.</p>
+<p>El análisis de datos deberá incluir al menos:</p>
+<ol type="1">
+<li>Aplicación de ANOVA de una vía</li>
+<li>Aplicación de ANOVA de dos vías con interacción</li>
+<li>Modelamiento de una regresión múltiple</li>
+<li>Aplicación de análisis de componentes principales</li>
+</ol>
+<p>En caso de cualquier duda, siéntete libre de contactarme.</p>
 
 
 </section>
