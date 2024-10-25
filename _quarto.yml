@@ -59,6 +59,8 @@ website:
             href: ejercicios_m5.qmd
           - text: "Ejercicios Módulo 7"
             href: ejercicios_m7.qmd
+      - href: final.qmd
+
 format:
   html:
     theme:

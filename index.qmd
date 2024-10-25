@@ -11,6 +11,10 @@ execute:
 ## Anuncios
 
 ::: {.callout-important}
+-   **26.10.2024**
+
+    - La fecha límite para entregar por correo electrónico el trabajo final del curso es el 30 de Noviembre.
+
 -   **19.10.2024:**
 
     -   Soluciones a los ejercicios prácticos 5.2 ya están disponibles.
@@ -244,18 +248,6 @@ Al término del curso, el estudiante deberá ser capaz de:
 -   Llevar a cabo, interpretar y reportar los resultados de metodologías estadísticas tales como: pruebas t, pruebas no paramétricas y análisis de varianza.
 
 -   Realizar reportes estadísticos básicos en R.
-
-## Evaluación del curso
-
-Para aprobar el curso, el estudiante tendrá la posibilidad de optar entre las siguientes opciones:
-
-**Opción 1:**
-
-Dos semanas antes del término de curso estará disponible en el servidor de Moodle una evaluación final de todo lo cubierto en los distintos módulos del mismo, abierta para su resolución hasta el 16 de Noviembre de 2024.
-
-**Opción 2:**
-
-Presentación de un reporte estadístico con datos del estudiante o citando la fuente de los mismos. La estructura de este tipo de reporte deberá seguir las instrucciones detalladas en el módulo del curso pertinente a la preparación y elaboración de reportes en R. La fecha límite de entrega de esta opción es hasta el 16 de Noviembre de 2024 a la dirección de correo del instructor.
 
 
 ## Canales de comunicación:
